@@ -228,7 +228,7 @@ questions = [
         "question": "Badania naukowe powinny być prowadzone międzynarodowo.",
         "effect": {
             "econ": 0,
-            "dipl": -10,
+            "dipl": 10,
             "govt": 0,
             "scty": 10
         }

@@ -432,6 +432,15 @@ ideologies = [
         }
     },
     {
+        "name": "Obiektywizm",
+        "stats": {
+            "econ": 10,
+            "dipl": 50,
+            "govt": 90,
+            "scty": 40
+        }
+    },
+    {
         "name": "Kapitalizm totalitarny",
         "stats": {
             "econ": 0,
