@@ -1,114 +1,156 @@
 <head>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-<link href='style.css' rel='stylesheet' type='text/css'>
-<title>Test8values</title>
-<link rel="icon" type="x-icon" href="icon.png">
-<link rel="shortcut icon" type="x-icon" href="icon.png">
-<meta charset="utf-8">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9774640362983169",
-    enable_page_level_ads: true
-  });
-</script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <title>Test 8values</title>
+    <!-- load MUI -->
+    <link href="//cdn.muicss.com/mui-0.9.35/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.9.35/js/mui.min.js"></script>
+    <!-- jquery -->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="menu.js"></script>
+    <link href="menu.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9774640362983169",
+            enable_page_level_ads: true
+          });
+    </script>
 </head>
-<body>
-<script type="application/javascript"
-        src="questions.js">
-</script>
-<h1>8values</h1>
-<hr>
-<h2 style="text-align:center;" id="question-number">Ładowanie...</h2>
-<p class="question" id="question-text"></p>
-<button class="button" onclick="next_question( 1.0)" style="background-color: #1b5e20;">W pełni zgadzam się</button> <br>
-<button class="button" onclick="next_question( 0.5)" style="background-color: #4caf50;">Zgadzam się</button> <br>
-<button class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;">Nie jestem pewny/a</button> <br>
-<button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;">Nie zgadzam się</button> <br>
-<button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">Zdecydowanie nie zgadzam się</button> <br>
-<button class="small_button" onclick="prev_question()" id="back_button">Wróć</button>
-<button class="small_button_off" id="back_button_off">Wróć</button><br>
 
-<!-- Website visit statistics - no personal information is collected! -->
-<script type="text/javascript">
-var sc_project=11325211;
-var sc_invisible=1;
-var sc_security="fd9f0659";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web stats"
+<body>
+    <script type="application/javascript" src="questions.js">
+    </script>
+    <div id="sidedrawer" class="mui--no-user-select">
+        <ul>
+            <li>
+                <strong><a href="index.html">Strona główna</a></strong>
+            </li>
+            <li>
+                <strong><a href="instructions.html">Instrukcja</a></strong>
+            </li>
+            <li>
+                <strong>Test</strong>
+            </li>
+        </ul>
+    </div>
+    <header id="header">
+        <div class="mui-appbar mui--appbar-line-height mui--z2">
+            <div class="mui-container-fluid">
+                <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+                <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+                <a class="mui--text-light mui--text-headline">8values</a>
+            </div>
+        </div>
+    </header>
+    <div id="content-wrapper">
+        <div class="mui--appbar-height"></div>
+        <div class="mui-container-fluid">
+            <br>
+            <div class="mui-panel">
+                <br>
+                <div style="text-align:center;">
+                    <div class="mui--text-display1" id="question-number">Ładowanie…</div><br>
+                    <div class="mui--text-title question" id="question-text"></div><br>
+                    <button class="mui-btn mui-btn--primary mui-btn--raised button" onclick="next_question( 1.0)" style="background-color: #1b5e20;">W pełni zgadzam się</button> <br>
+                    <button class="mui-btn mui-btn--primary mui-btn--raised button" onclick="next_question( 0.5)" style="background-color: #4caf50;">Zgadzam się</button> <br>
+                    <button class="mui-btn mui-btn--primary mui-btn--raised button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;">Nie jestem pewny/a</button> <br>
+                    <button class="mui-btn mui-btn--primary mui-btn--raised button" onclick="next_question(-0.5)" style="background-color: #f44336;">Nie zgadzam się</button> <br>
+                    <button class="mui-btn mui-btn--primary mui-btn--raised button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">Zdecydowanie nie zgadzam się</button> <br>
+                    <button class="mui-btn mui-btn--fab mui-btn--primary" onclick="prev_question()" id="back_button">←</button>
+                    <button class="mui-btn mui-btn--fab" id="back_button_off">←</button><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="mui-container-fluid">
+            <br> Tłumaczył Marcin Mikołajczak. Kod źródłowy dostępny jest na <a href="https://github.com/m4sk1n/8values">GitHubie</a>.
+        </div>
+    </footer>
+
+    <!-- Website visit statistics - no personal information is collected! -->
+    <script type="text/javascript">
+        var sc_project=11325211;
+        var sc_invisible=1;
+        var sc_security="fd9f0659";
+        var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+    </script>
+    <noscript><div class="statcounter"><a title="web stats"
 href="http://statcounter.com/" target="_blank"><img
 class="statcounter"
 src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
 stats"></a></div></noscript>
 
-<!-- JavaScript for the test itself -->
-<script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    var econ, dipl, govt, scty; // User's scores
-    econ = dipl = govt = scty = 0;
-    var qn = 0; // Question number
-    var prev_answer = null;
-    init_question();
-    for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ)
-        max_dipl += Math.abs(questions[i].effect.dipl)
-        max_govt += Math.abs(questions[i].effect.govt)
-        max_scty += Math.abs(questions[i].effect.scty)
-    }
-    function init_question() {
-        document.getElementById("question-text").innerHTML = questions[qn].question;
-        document.getElementById("question-number").innerHTML = (qn + 1) + " pytanie z " + (questions.length);
-        if (prev_answer == null) {
-            document.getElementById("back_button").style.display = 'none';
-            document.getElementById("back_button_off").style.display = 'block';
-        } else {
-            document.getElementById("back_button").style.display = 'block';
-            document.getElementById("back_button_off").style.display = 'none';
-        }
-
-    }
-
-    function next_question(mult) {
-        econ += mult*questions[qn].effect.econ
-        dipl += mult*questions[qn].effect.dipl
-        govt += mult*questions[qn].effect.govt
-        scty += mult*questions[qn].effect.scty
-        qn++;
-        prev_answer = mult;
-        if (qn < questions.length) {
-            init_question();
-        } else {
-            results();
-        }
-    }
-    function prev_question() {
-        if (prev_answer == null) {
-            return;
-        }
-        qn--;
-        econ -= prev_answer * questions[qn].effect.econ;
-        dipl -= prev_answer * questions[qn].effect.dipl;
-        govt -= prev_answer * questions[qn].effect.govt;
-        scty -= prev_answer * questions[qn].effect.scty;
-        prev_answer = null;
+    <!-- JavaScript for the test itself -->
+    <script>
+        var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
+        max_econ = max_dipl = max_govt = max_scty = 0;
+        var econ, dipl, govt, scty; // User's scores
+        econ = dipl = govt = scty = 0;
+        var qn = 0; // Question number
+        var prev_answer = null;
         init_question();
-
-    }
-    function calc_score(score,max) {
-        return (100*(max+score)/(2*max)).toFixed(1)
-    }
-    function results() {
-        location.href = `results.html`
-            + `?e=${calc_score(econ,max_econ)}`
-            + `&d=${calc_score(dipl,max_dipl)}`
-            + `&g=${calc_score(govt,max_govt)}`
-            + `&s=${calc_score(scty,max_scty)}`
-    }
-</script>
+        for (var i = 0; i < questions.length; i++) {
+            max_econ += Math.abs(questions[i].effect.econ)
+            max_dipl += Math.abs(questions[i].effect.dipl)
+            max_govt += Math.abs(questions[i].effect.govt)
+            max_scty += Math.abs(questions[i].effect.scty)
+        }
+        function init_question() {
+            document.getElementById("question-text").innerHTML = questions[qn].question;
+            document.getElementById("question-number").innerHTML = (qn + 1) + " pytanie z " + (questions.length);
+            if (prev_answer == null) {
+                document.getElementById("back_button").style.display = 'none';
+                document.getElementById("back_button_off").style.display = 'block';
+            } else {
+                document.getElementById("back_button").style.display = 'block';
+                document.getElementById("back_button_off").style.display = 'none';
+            }
+    
+        }
+    
+        function next_question(mult) {
+            econ += mult*questions[qn].effect.econ
+            dipl += mult*questions[qn].effect.dipl
+            govt += mult*questions[qn].effect.govt
+            scty += mult*questions[qn].effect.scty
+            qn++;
+            prev_answer = mult;
+            if (qn < questions.length) {
+                init_question();
+            } else {
+                results();
+            }
+        }
+        function prev_question() {
+            if (prev_answer == null) {
+                return;
+            }
+            qn--;
+            econ -= prev_answer * questions[qn].effect.econ;
+            dipl -= prev_answer * questions[qn].effect.dipl;
+            govt -= prev_answer * questions[qn].effect.govt;
+            scty -= prev_answer * questions[qn].effect.scty;
+            prev_answer = null;
+            init_question();
+    
+        }
+        function calc_score(score,max) {
+            return (100*(max+score)/(2*max)).toFixed(1)
+        }
+        function results() {
+            location.href = `results.html`
+                + `?e=${calc_score(econ,max_econ)}`
+                + `&d=${calc_score(dipl,max_dipl)}`
+                + `&g=${calc_score(govt,max_govt)}`
+                + `&s=${calc_score(scty,max_scty)}`
+        }
+    </script>
 </body>

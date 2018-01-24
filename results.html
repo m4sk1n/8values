@@ -1,249 +1,299 @@
 <head>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-<link href='style.css' rel='stylesheet' type='text/css'>
-<title>Wyniki testu 8values</title>
-<link rel="icon" type="x-icon" href="icon.png">
-<link rel="shortcut icon" type="x-icon" href="icon.png">
-<meta charset="utf-8">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9774640362983169",
-    enable_page_level_ads: true
-  });
-</script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+    <!-- load MUI -->
+    <link href="//cdn.muicss.com/mui-0.9.35/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.9.35/js/mui.min.js"></script>
+    <!-- jquery -->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="menu.js"></script>
+    <link href="menu.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9774640362983169",
+            enable_page_level_ads: true
+          });
+    </script>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>Wyniki testu 8values</title>
+
 </head>
-<script type="application/javascript"
-        src="ideologies.js">
+<script type="application/javascript" src="ideologies.js">
 </script>
 
 <body>
-<h1>8values</h1>
-<hr>
+    <div id="sidedrawer" class="mui--no-user-select">
+        <ul>
+            <li>
+                <strong><a href="index.html">Strona główna</a></strong>
+            </li>
+            <li>
+                <strong><a href="instructions.html">Instrukcja</a></strong>
+            </li>
+            <li>
+                <strong><a href="quiz.html">Test</a></strong>
+            </li>
+        </ul>
+    </div>
+    <header id="header">
+        <div class="mui-appbar mui--appbar-line-height mui--z2">
+            <div class="mui-container-fluid">
+                <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+                <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+                <a class="mui--text-light mui--text-headline">8values</a>
+            </div>
+        </div>
+    </header>
+    <div id="content-wrapper">
+        <div class="mui--appbar-height"></div>
+        <div class="mui-container-fluid">
+            <br>
+            <div class="mui-panel">
+                <h1>Wyniki</h1>
 
-<h1>Wyniki</h1>
-
-<h2>Oś ekonomiczna: <span class="weight-300" id="economic-label"></span></h2>
-<div class="axis">
-    <img id="img-equality" src="value_images/equality.svg" height="128pt"/>
-    <div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality"></div></div>
-    <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
-    <img id="img-wealth" src="value_images/wealth.svg" height="128pt"/>
-</div>
-<h2>Oś dyplomatyczna: <span class="weight-300" id="diplomatic-label"></span></h2>
-<div class="axis">
-    <img id="img-might" src="value_images/might.svg" height="128pt"/>
-    <div class="bar might" id="bar-might"><div class="text-wrapper" id="might"></div></div>
-    <div class="bar peace" id="bar-peace"><div class="text-wrapper" id="peace"></div></div>
-    <img id="img-peace" src="value_images/peace.svg" height="128pt"/>
-</div>
-<h2>Oś cywilna: <span class="weight-300" id="state-label"></span></h2>
-<div class="axis">
-    <img id="img-liberty" src="value_images/liberty.svg" height="128pt"/>
-    <div class="bar liberty" id="bar-liberty"><div class="text-wrapper" id="liberty"></div></div>
-    <div class="bar authority" id="bar-authority"><div class="text-wrapper" id="authority"></div></div>
-    <img id="img-authority" src="value_images/authority.svg" height="128pt"/>
-</div>
-<h2>Oś społeczna: <span class="weight-300" id="society-label"></span></h2>
-<div class="axis">
-    <img id="img-tradition" src="value_images/tradition.svg" height="128pt"/>
-    <div class="bar tradition" id="bar-tradition"><div class="text-wrapper" id="tradition"></div></div>
-    <div class="bar progress" id="bar-progress"><div class="text-wrapper" id="progress"></div></div>
-    <img id="img-progress" src="value_images/progress.svg" height="128pt"/>
-</div>
-<h2>Najbliższe dopasowanie: <span class="weight-300" id="ideology-label"></span></h2>
-<p>Nie jest to w pełni dokładne. Wciąż nad tym pracujemy, nie jest to tak dokładne odzwierciedlenie poglądów, jak przedstawienie na 4 osiach.</p>
-<p>Możesz podzielić się wynikami kopiując adres poniższej strony, lub korzystając z poniższej grafiki. Uważasz, że dopasowanie nie pasuje do Twoich poglądów? Chcesz pomóc nam skalibrować test? Napisz maila z uwagami, wraz z opisem poglądów na adres <a href="mailto:eightvalues@gmail.com">eightvalues@gmail.com</a> (w języku angielskim). Właściwym miejscem na opinie dotyczące tłumaczenia jest adres <a href="mailto:me@m4sk.in">me@m4sk.in</a>.</p>
-<hr/>
-<canvas id="banner" width=800 height=650 style="font-family:Montserrat"></canvas>
-<h2>A skoro tu już jesteś…</h2>
-<p>Zapraszam do podzielenia się wynikiem testu na ulubionych portalach społecznościowych. Możesz też zaobserwować <a href="https://mstdn.m4sk.in/@m4sk1n">mnie</a> i <a href="https://mstdn.m4sk.in/@8values">8values</a> w wolnej, zdecentralizowanej i odpornej na cenzurę sieci społecznościowej Mastodon. Nie musisz… ;)<br/><br/>
-
-<button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Wróć</button> <br>
-<!-- Website visit statistics - no personal information is collected! -->
-<script type="text/javascript">
-var sc_project=11325211;
-var sc_invisible=1;
-var sc_security="fd9f0659";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web stats"
+                <h2>Oś ekonomiczna: <span class="weight-300" id="economic-label"></span></h2>
+                <div class="axis">
+                    <img id="img-equality" src="value_images/equality.svg" height="128pt" />
+                    <div class="bar equality" id="bar-equality">
+                        <div class="text-wrapper" id="equality"></div>
+                    </div>
+                    <div class="bar wealth" id="bar-wealth">
+                        <div class="text-wrapper" id="wealth"></div>
+                    </div>
+                    <img id="img-wealth" src="value_images/wealth.svg" height="128pt" />
+                </div>
+                <h2>Oś dyplomatyczna: <span class="weight-300" id="diplomatic-label"></span></h2>
+                <div class="axis">
+                    <img id="img-might" src="value_images/might.svg" height="128pt" />
+                    <div class="bar might" id="bar-might">
+                        <div class="text-wrapper" id="might"></div>
+                    </div>
+                    <div class="bar peace" id="bar-peace">
+                        <div class="text-wrapper" id="peace"></div>
+                    </div>
+                    <img id="img-peace" src="value_images/peace.svg" height="128pt" />
+                </div>
+                <h2>Oś cywilna: <span class="weight-300" id="state-label"></span></h2>
+                <div class="axis">
+                    <img id="img-liberty" src="value_images/liberty.svg" height="128pt" />
+                    <div class="bar liberty" id="bar-liberty">
+                        <div class="text-wrapper" id="liberty"></div>
+                    </div>
+                    <div class="bar authority" id="bar-authority">
+                        <div class="text-wrapper" id="authority"></div>
+                    </div>
+                    <img id="img-authority" src="value_images/authority.svg" height="128pt" />
+                </div>
+                <h2>Oś społeczna: <span class="weight-300" id="society-label"></span></h2>
+                <div class="axis">
+                    <img id="img-tradition" src="value_images/tradition.svg" height="128pt" />
+                    <div class="bar tradition" id="bar-tradition">
+                        <div class="text-wrapper" id="tradition"></div>
+                    </div>
+                    <div class="bar progress" id="bar-progress">
+                        <div class="text-wrapper" id="progress"></div>
+                    </div>
+                    <img id="img-progress" src="value_images/progress.svg" height="128pt" />
+                </div>
+                <h2>Najbliższe dopasowanie: <span class="weight-300" id="ideology-label"></span></h2>
+                <p>Nie jest to w pełni dokładne. Wciąż nad tym pracujemy, nie jest to tak dokładne odzwierciedlenie poglądów, jak przedstawienie na 4 osiach.</p>
+                <p>Możesz podzielić się wynikami kopiując adres poniższej strony, lub korzystając z poniższej grafiki. Uważasz, że dopasowanie nie pasuje do Twoich poglądów? Chcesz pomóc nam skalibrować test? Napisz maila z uwagami, wraz z opisem poglądów na adres <a href="mailto:eightvalues@gmail.com">eightvalues@gmail.com</a> (w języku angielskim). Właściwym miejscem na opinie dotyczące tłumaczenia jest adres <a href="mailto:me@m4sk.in">me@m4sk.in</a>.</p>
+                <hr/>
+                <canvas id="banner" width=800 height=650 style="font-family:Roboto"></canvas>
+                <h2>A skoro tu już jesteś…</h2>
+                <p>Zapraszam do podzielenia się wynikiem testu na ulubionych portalach społecznościowych. Możesz też zaobserwować <a href="https://glitch.social/@MarcinMikolajczak">mnie</a> w wolnej, zdecentralizowanej i odpornej na cenzurę sieci społecznościowej Mastodon. Nie musisz… ;)<br/><br/>
+                    <button class="mui-btn mui-btn--fab mui-btn--primary" onclick="location.href='index.html';">←</button>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="mui-container-fluid">
+            <br> Tłumaczył Marcin Mikołajczak. Kod źródłowy dostępny jest na <a href="https://github.com/m4sk1n/8values">GitHubie</a>.
+        </div>
+    </footer>
+    <!-- Website visit statistics - no personal information is collected! -->
+    <script type="text/javascript">
+        var sc_project=11325211;
+                        var sc_invisible=1;
+                        var sc_security="fd9f0659";
+                        var scJsHost = (("https:" == document.location.protocol) ?
+                        "https://secure." : "http://www.");
+                        document.write("<sc"+"ript type='text/javascript' src='" +
+                        scJsHost+
+                        "statcounter.com/counter/counter.js'></"+"script>");
+    </script>
+    <noscript><div class="statcounter"><a title="web stats"
 href="http://statcounter.com/" target="_blank"><img
 class="statcounter"
 src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
 stats"></a></div></noscript>
-<!-- JavaScript for the test itself -->
-<script>
-    function getQueryVariable(variable)
-    {
-           var query = window.location.search.substring(1)
-           var vars = query.split("&")
-           for (var i=0;i<vars.length;i++) {
-                   var pair = vars[i].split("=")
-                   if(pair[0] == variable) {return pair[1]}
-           }
-           return(NaN);
-    }
-
-    function setBarValue(name, value) {
-        innerel = document.getElementById(name)
-        outerel = document.getElementById("bar-" + name)
-        outerel.style.width = (value + "%")
-        innerel.innerHTML = (value + "%")
-        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
-            innerel.style.visibility = "hidden"
-        }
-    }
-
-    econArray = ["Komunista","Socjalista","Lekki socjalista","Centrysta","Rynkowiec","Kapitalista","Kapitalista wolnorynkowy"]
-    diplArray = ["Kosmopolita","Internacjonalista","Pokojowy","Zbalansowany","Patriota","Narodowiec","Szowinista"]
-    govtArray = ["Anarchista","Libertarianin","Liberał","Pośredni","Etatysta","Autorytatywny","Totalitarysta"]
-    sctyArray = ["Rewolucjonista","Bardzo postępowy","Postępowy","Neutralny","Tradycjonalista","Bardzo tradycjonalistyczny","Reakcjonista"]
-
-    function setLabel(val,ary) {
-        if (val > 100) { return "" } else
-        if (val > 90) { return ary[0] } else
-        if (val > 75) { return ary[1] } else
-        if (val > 60) { return ary[2] } else
-        if (val >= 40) { return ary[3] } else
-        if (val >= 25) { return ary[4] } else
-        if (val >= 10) { return ary[5] } else
-        if (val >= 0) { return ary[6] } else
-        	{return ""}
-    }
-
-    equality  = getQueryVariable("e")
-    peace     = getQueryVariable("d")
-    liberty   = getQueryVariable("g")
-    progress  = getQueryVariable("s")
-    wealth    = (100 - equality).toFixed(1)
-    might     = (100 - peace   ).toFixed(1)
-    authority = (100 - liberty ).toFixed(1)
-    tradition = (100 - progress).toFixed(1)
-
-    setBarValue("equality", equality)
-    setBarValue("wealth", wealth)
-    setBarValue("peace", peace)
-    setBarValue("might", might)
-    setBarValue("liberty", liberty)
-    setBarValue("authority", authority)
-    setBarValue("progress", progress)
-    setBarValue("tradition", tradition)
-
-    document.getElementById("economic-label").innerHTML = setLabel(equality, econArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(peace, diplArray)
-    document.getElementById("state-label").innerHTML = setLabel(liberty, govtArray)
-    document.getElementById("society-label").innerHTML = setLabel(progress, sctyArray)
-
-    ideology = ""
-    ideodist = Infinity
-    for (var i = 0; i < ideologies.length; i++) {
-        dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - equality), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.govt - liberty), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - peace), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.scty - progress), 1.73856063)
-        if (dist < ideodist) {
-            ideology = ideologies[i].name
-            ideodist = dist
-        }
-    }
-    document.getElementById("ideology-label").innerHTML = ideology
-
-    function createImage(src, x, y, w, h) {
-        img = new Image ()
-        img.src = src
-        img.onLoad = function() {
-            ctx.drawImage(img, x, y, w, h)
-        }
-    }
-
-    window.onload = function() {
-        var c = document.getElementById("banner")
-        var ctx = c.getContext("2d")
-        ctx.fillStyle = "#EEEEEE"
-        ctx.fillRect(0,0,800,600)
-
-        img = document.getElementById("img-equality")
-        ctx.drawImage(img, 20, 170, 100, 100);
-        img = document.getElementById("img-wealth")
-        ctx.drawImage(img, 680, 170, 100, 100)
-        img = document.getElementById("img-might")
-        ctx.drawImage(img, 20, 290, 100, 100)
-        img = document.getElementById("img-peace")
-        ctx.drawImage(img, 680, 290, 100, 100)
-        img = document.getElementById("img-liberty")
-        ctx.drawImage(img, 20, 410, 100, 100)
-        img = document.getElementById("img-authority")
-        ctx.drawImage(img, 680, 410, 100, 100)
-        img = document.getElementById("img-tradition")
-        ctx.drawImage(img, 20, 530, 100, 100)
-        img = document.getElementById("img-progress")
-        ctx.drawImage(img, 680, 530, 100, 100)
-
-        ctx.fillStyle="#222222"
-        ctx.fillRect(120, 180, 560, 80)
-        ctx.fillRect(120, 300, 560, 80)
-        ctx.fillRect(120, 420, 560, 80)
-        ctx.fillRect(120, 540, 560, 80)
-        ctx.fillStyle="#f44336"
-        ctx.fillRect(120, 184, 5.6*equality-2, 72)
-        ctx.fillStyle="#00897b"
-        ctx.fillRect(682-5.6*wealth, 184, 5.6*wealth-2, 72)
-        ctx.fillStyle="#ff9800"
-        ctx.fillRect(120, 304, 5.6*might-2, 72)
-        ctx.fillStyle="#03a9f4"
-        ctx.fillRect(682-5.6*peace, 304, 5.6*peace-2, 72)
-        ctx.fillStyle="#ffeb3b"
-        ctx.fillRect(120, 424, 5.6*liberty-2, 72)
-        ctx.fillStyle="#3f51b5"
-        ctx.fillRect(682-5.6*authority, 424, 5.6*authority-2, 72)
-        ctx.fillStyle="#8bc34a"
-        ctx.fillRect(120, 544, 5.6*tradition-2, 72)
-        ctx.fillStyle="#9c27b0"
-        ctx.fillRect(682-5.6*progress, 544, 5.6*progress-2, 72)
-        ctx.fillStyle="#222222"
-        ctx.font="700 80px Montserrat"
-        ctx.textAlign="left"
-        ctx.fillText("8values", 20, 90)
-        ctx.font="40px Montserrat"
-        ctx.textAlign="right"
-        ctx.fillText(ideology, 780, 87.5)
-
-        ctx.font="50px Montserrat"
-        ctx.textAlign="left"
-        if (equality  > 30) {ctx.fillText(equality + "%", 130, 237.5)}
-        if (might     > 30) {ctx.fillText(might + "%", 130, 357.5)}
-        if (liberty   > 30) {ctx.fillText(liberty + "%", 130, 477.5)}
-        if (tradition > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
-        ctx.textAlign="right"
-        if (wealth    > 30) {ctx.fillText(wealth + "%", 670, 237.5)}
-        if (peace     > 30) {ctx.fillText(peace + "%", 670, 357.5)}
-        if (authority > 30) {ctx.fillText(authority + "%", 670, 477.5)}
-        if (progress  > 30) {ctx.fillText(progress + "%", 670, 597.5)}
-
-        ctx.font="300 30px Montserrat"
-        ctx.fillText("8values.m4sk.in", 780, 60)
-        ctx.textAlign="center"
-        ctx.fillText("Oś ekonomiczna: " + document.getElementById("economic-label").innerHTML, 400, 175)
-        ctx.fillText("Oś dyplomatyczna: " + document.getElementById("diplomatic-label").innerHTML, 400, 295)
-        ctx.fillText("Oś cywilna: " + document.getElementById("state-label").innerHTML, 400, 415)
-        ctx.fillText("Oś społeczna: " + document.getElementById("society-label").innerHTML, 400, 535)
-    }
+    <!-- JavaScript for the test itself -->
+    <script>
+        function getQueryVariable(variable)
+                        {
+                               var query = window.location.search.substring(1)
+                               var vars = query.split("&")
+                               for (var i=0;i<vars.length;i++) {
+                                       var pair = vars[i].split("=")
+                                       if(pair[0] == variable) {return pair[1]}
+                               }
+                               return(NaN);
+                        }
+                    
+                        function setBarValue(name, value) {
+                            innerel = document.getElementById(name)
+                            outerel = document.getElementById("bar-" + name)
+                            outerel.style.width = (value + "%")
+                            innerel.innerHTML = (value + "%")
+                            if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+                                innerel.style.visibility = "hidden"
+                            }
+                        }
+                    
+                        econArray = ["Komunista","Socjalista","Lekki socjalista","Centrysta","Rynkowiec","Kapitalista","Kapitalista wolnorynkowy"]
+                        diplArray = ["Kosmopolita","Internacjonalista","Pokojowy","Zbalansowany","Patriota","Narodowiec","Szowinista"]
+                        govtArray = ["Anarchista","Libertarianin","Liberał","Pośredni","Etatysta","Autorytatywny","Totalitarysta"]
+                        sctyArray = ["Rewolucjonista","Bardzo postępowy","Postępowy","Neutralny","Tradycjonalista","Bardzo tradycjonalistyczny","Reakcjonista"]
+                    
+                        function setLabel(val,ary) {
+                            if (val > 100) { return "" } else
+                            if (val > 90) { return ary[0] } else
+                            if (val > 75) { return ary[1] } else
+                            if (val > 60) { return ary[2] } else
+                            if (val >= 40) { return ary[3] } else
+                            if (val >= 25) { return ary[4] } else
+                            if (val >= 10) { return ary[5] } else
+                            if (val >= 0) { return ary[6] } else
+                            	{return ""}
+                        }
+                    
+                        equality  = getQueryVariable("e")
+                        peace     = getQueryVariable("d")
+                        liberty   = getQueryVariable("g")
+                        progress  = getQueryVariable("s")
+                        wealth    = (100 - equality).toFixed(1)
+                        might     = (100 - peace   ).toFixed(1)
+                        authority = (100 - liberty ).toFixed(1)
+                        tradition = (100 - progress).toFixed(1)
+                    
+                        setBarValue("equality", equality)
+                        setBarValue("wealth", wealth)
+                        setBarValue("peace", peace)
+                        setBarValue("might", might)
+                        setBarValue("liberty", liberty)
+                        setBarValue("authority", authority)
+                        setBarValue("progress", progress)
+                        setBarValue("tradition", tradition)
+                    
+                        document.getElementById("economic-label").innerHTML = setLabel(equality, econArray)
+                        document.getElementById("diplomatic-label").innerHTML = setLabel(peace, diplArray)
+                        document.getElementById("state-label").innerHTML = setLabel(liberty, govtArray)
+                        document.getElementById("society-label").innerHTML = setLabel(progress, sctyArray)
+                    
+                        ideology = ""
+                        ideodist = Infinity
+                        for (var i = 0; i < ideologies.length; i++) {
+                            dist = 0
+                            dist += Math.pow(Math.abs(ideologies[i].stats.econ - equality), 2)
+                            dist += Math.pow(Math.abs(ideologies[i].stats.govt - liberty), 2)
+                            dist += Math.pow(Math.abs(ideologies[i].stats.dipl - peace), 1.73856063)
+                            dist += Math.pow(Math.abs(ideologies[i].stats.scty - progress), 1.73856063)
+                            if (dist < ideodist) {
+                                ideology = ideologies[i].name
+                                ideodist = dist
+                            }
+                        }
+                        document.getElementById("ideology-label").innerHTML = ideology
+                    
+                        function createImage(src, x, y, w, h) {
+                            img = new Image ()
+                            img.src = src
+                            img.onLoad = function() {
+                                ctx.drawImage(img, x, y, w, h)
+                            }
+                        }
+                    
+                        window.onload = function() {
+                            var c = document.getElementById("banner")
+                            var ctx = c.getContext("2d")
+                            ctx.fillStyle = "#EEEEEE"
+                            ctx.fillRect(0,0,800,600)
+                    
+                            img = document.getElementById("img-equality")
+                            ctx.drawImage(img, 20, 170, 100, 100);
+                            img = document.getElementById("img-wealth")
+                            ctx.drawImage(img, 680, 170, 100, 100)
+                            img = document.getElementById("img-might")
+                            ctx.drawImage(img, 20, 290, 100, 100)
+                            img = document.getElementById("img-peace")
+                            ctx.drawImage(img, 680, 290, 100, 100)
+                            img = document.getElementById("img-liberty")
+                            ctx.drawImage(img, 20, 410, 100, 100)
+                            img = document.getElementById("img-authority")
+                            ctx.drawImage(img, 680, 410, 100, 100)
+                            img = document.getElementById("img-tradition")
+                            ctx.drawImage(img, 20, 530, 100, 100)
+                            img = document.getElementById("img-progress")
+                            ctx.drawImage(img, 680, 530, 100, 100)
+                    
+                            ctx.fillStyle="#222222"
+                            ctx.fillRect(120, 180, 560, 80)
+                            ctx.fillRect(120, 300, 560, 80)
+                            ctx.fillRect(120, 420, 560, 80)
+                            ctx.fillRect(120, 540, 560, 80)
+                            ctx.fillStyle="#f44336"
+                            ctx.fillRect(120, 184, 5.6*equality-2, 72)
+                            ctx.fillStyle="#00897b"
+                            ctx.fillRect(682-5.6*wealth, 184, 5.6*wealth-2, 72)
+                            ctx.fillStyle="#ff9800"
+                            ctx.fillRect(120, 304, 5.6*might-2, 72)
+                            ctx.fillStyle="#03a9f4"
+                            ctx.fillRect(682-5.6*peace, 304, 5.6*peace-2, 72)
+                            ctx.fillStyle="#ffeb3b"
+                            ctx.fillRect(120, 424, 5.6*liberty-2, 72)
+                            ctx.fillStyle="#3f51b5"
+                            ctx.fillRect(682-5.6*authority, 424, 5.6*authority-2, 72)
+                            ctx.fillStyle="#8bc34a"
+                            ctx.fillRect(120, 544, 5.6*tradition-2, 72)
+                            ctx.fillStyle="#9c27b0"
+                            ctx.fillRect(682-5.6*progress, 544, 5.6*progress-2, 72)
+                            ctx.fillStyle="#222222"
+                            ctx.font="700 80px Roboto Slab"
+                            ctx.textAlign="left"
+                            ctx.fillText("8values", 20, 90)
+                            ctx.font="40px Roboto Slab"
+                            ctx.textAlign="right"
+                            ctx.fillText(ideology, 780, 87.5)
+                    
+                            ctx.font="50px Roboto Slab"
+                            ctx.textAlign="left"
+                            if (equality  > 30) {ctx.fillText(equality + "%", 130, 237.5)}
+                            if (might     > 30) {ctx.fillText(might + "%", 130, 357.5)}
+                            if (liberty   > 30) {ctx.fillText(liberty + "%", 130, 477.5)}
+                            if (tradition > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
+                            ctx.textAlign="right"
+                            if (wealth    > 30) {ctx.fillText(wealth + "%", 670, 237.5)}
+                            if (peace     > 30) {ctx.fillText(peace + "%", 670, 357.5)}
+                            if (authority > 30) {ctx.fillText(authority + "%", 670, 477.5)}
+                            if (progress  > 30) {ctx.fillText(progress + "%", 670, 597.5)}
+                    
+                            ctx.font="300 30px Roboto Slab"
+                            ctx.fillText("8values.m4sk.in", 780, 60)
+                            ctx.textAlign="center"
+                            ctx.fillText("Oś ekonomiczna: " + document.getElementById("economic-label").innerHTML, 400, 175)
+                            ctx.fillText("Oś dyplomatyczna: " + document.getElementById("diplomatic-label").innerHTML, 400, 295)
+                            ctx.fillText("Oś cywilna: " + document.getElementById("state-label").innerHTML, 400, 415)
+                            ctx.fillText("Oś społeczna: " + document.getElementById("society-label").innerHTML, 400, 535)
+                        }
     </script>
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- reklama -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9774640362983169"
-     data-ad-slot="4261780154"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- reklama -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9774640362983169" data-ad-slot="4261780154" data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </body>
