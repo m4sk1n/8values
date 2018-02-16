@@ -171,7 +171,7 @@ ideologies = [
         }
     },
     {
-        "name": "Chrześcijańska demokracja",
+        "name": "Religijna demokracja",
         "stats": {
             "econ": 60,
             "dipl": 60,
