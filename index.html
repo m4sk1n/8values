@@ -1,99 +1,106 @@
 <head>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-<link href='style.css' rel='stylesheet' type='text/css'>
-<title>Test 8values (po polsku!)</title>
-<link rel="icon" type="x-icon" href="icon.png">
-<link rel="shortcut icon" type="x-icon" href="icon.png">
-<meta charset="utf-8">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9774640362983169",
-    enable_page_level_ads: true
-  });
-</script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>Test 8values (po polsku!)</title>
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
 </head>
+
 <body>
+    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
+    <script type="application/javascript" src="i18n.js"></script>
+    <h1>8values</h1>
+    <hr>
+    <button data-i18n="start" class="button" onclick="location.href='instructions.html';" style="font-size:36pt;"></button>
+    <figure id="values" class="center">
+        <p data-i18n="economic" data-ns="values"></p>
+        <p data-i18n="diplomatic" data-ns="values"></p>
+        <p data-i18n="civil" data-ns="values"></p>
+        <p data-i18n="societal" data-ns="values"></p>
+        <figure style="clear:both">
+            <img src="value_images/equality.svg" />
+            <figcaption data-i18n="equality" data-ns="values"></figcaption>
+        </figure>
+        <figure>
+            <img src="value_images/might.svg" />
+            <figcaption data-i18n="might" data-ns="values"></figcaption>
+        </figure>
+        <figure>
+            <img src="value_images/liberty.svg" />
+            <figcaption data-i18n="liberty" data-ns="values"></figcaption>
+        </figure>
+        <figure>
+            <img src="value_images/tradition.svg" />
+            <figcaption data-i18n="tradition" data-ns="values"></figcaption>
+        </figure>
+        <figure style="clear:both">
+            <img src="value_images/wealth.svg" />
+            <figcaption data-i18n="wealth" data-ns="values"></figcaption>
+        </figure>
+        <figure>
+            <img src="value_images/peace.svg" />
+            <figcaption data-i18n="peace" data-ns="values"></figcaption>
+        </figure>
+        <figure>
+            <img src="value_images/authority.svg" />
+            <figcaption data-i18n="authority" data-ns="values"></figcaption>
+        </figure>
+        <figure>
+            <img src="value_images/progress.svg" />
+            <figcaption data-i18n="progress" data-ns="values"></figcaption>
+        </figure>
+    </figure>
 
-<h1>8values</h1>
-<hr>
-<button class="button" onclick="location.href='instructions.html';" style="font-size:36pt;">Naciśnij, aby rozpocząć!</button>
-<img src="values.svg" class="center"></img>
-<h2>Czym jest 8values?</h2>
-    <p>8values jest testem politycznym, który stara się przyporządkować procentowo Twoje poglądy do ośmiu różnych wartości politycznych. Zostaniesz zapoznany/a z opinią, do której musisz ustosunkować się, od <b>W pełni zgadzam się</b> do <b>Zdecydowanie nie zgadzam się</b>, a każda odpowiedź ma wpływ na wynik. Na końcu, Twoje wartości zostaną porównane z maksymalnymi dla każdej wartości, zwracając wartość procentową. Odpowiadaj szczerze!<br /><br />
-    Test składa się z <b><u><span id="numOfQuestions"></span></u></b> pytań.</p>
+    <h2 data-i18n="faq_whatis" style="clear:both"></h2>
+    <p data-i18n="faq_whatis_answer"></p>
 
-<h2>Co oznacza te 8 wartości?</h2>
-    <p>Są tu 4 niezależne osie – ekonomiczna, dyplomatyczna, narodowa i społeczna – do każdej przypisane są dwie przeciwstawne wartości:</p>
-    <p class="value-description"><b style="color:#d32f2f;">Równość</b> (Ekonomia)<br/>
-        Osoby o wyższych wynikach w kategorii równości wierzą, że ekonomia powinna równo dostarczać dobra dla całej ludzkości. Popierają oni progresywne podatki, programy socjalne i (przy wyższych wartościach) socjalizm.</p>
-    <p class="value-description"><b style="color:#00796b;">Rynek</b> (Ekonomia)<br/>
-        Osoby o wyższym wyniku wierzą, że ekonomia powinna szybko rozwijać się. Wspierają oni obniżanie podatków, prywatyzację, deregulację i (przy wyższych wartościach) wolnorynkowy kapitalizm.</p>
-    <p class="value-description"><b style="color:#f57c00;">Naród</b> (Dyplomacja)<br/>
-        Osoby te są patriotami i narodowcami. Wierzą w dobro agresywnej polityki zagranicznej, wartość wojsk, siły, suwerenności i (przy wyższych wartościach) ekspansji terytorialnej.</p>
-    <p class="value-description"><b style="color:#0288d1;">Glob</b> (Dyplomacja)<br/>
-        Są to kosmopolici i globaliści. Wierzą w dobro pokojowej polityki zagranicznej, podkreślenie dyplomacji, współpracy, integracji i (przy wyższych wartościach) ogólnoświatowy rząd.</p>
-    <p class="value-description"><b style="color:#fbc02d;">Wolność</b> (Państwo)<br/>
-        Osoby te wierzą w silną wolność obywateli. Wspierają oni demokrację i sprzeciwiają się ingerencji państwa w życie. Dotyczy do wolności obywatelskich, nie ekonomicznych.</p>
-    <p class="value-description"><b style="color:#303f9f;">Autorytaryzm</b> (Państwo)<br/>
-        Wierzą oni w moc silnego państwa. Popierają interwencję państw w życie codzienne, suwerenność rządu i (przy wyższych wartościach) cenzurę i autokreację.</p>
-    <p class="value-description"><b style="color:#689f38;">Tradycja</b> (Społeczeństwo)<br/>
-        Wspierają oni tradycyjne wartości i kierowanie się moralnością. Są oni zwykle, choć nie zawsze, religijni i popierają zasadę status quo, bądź status quo ante.</p>
-    <p class="value-description"><b style="color:#7b1fa2;">Postęp</b> (Społeczeństwo)<br/>
-        Wierzą w dobry wpływ zmian społecznych i racjonalizm. Choć nie zawsze, często są osobami świeckimi lub ateistami, wspierają operacje środowiskowe i badania naukowe lub technologiczne.</p>
-<h2>Co oznacza „Najbliższe dopasowanie”?</h2>
-    <p>Oprócz przypisywania do ośmiu wartości, test próbuje przyporządkować Cię do ideologii. Nie jest to tak dokładne, wciąż nad tym pracujemy. Jeżeli nie zgadzasz się z wynikiem, skontaktuj się pod adresem eightvalues@gmail.com (w języku angielskim), poinformuj o swoich wynikach, przypisanej ideologii, pasującej Ci ideologii, a my spróbujemy poprawić działanie naszego algorytmu. Dziękujemy!</p>
-<h2>Nie zgadzam się z wynikiem!</h2>
-    <p>¯\_(ツ)_/¯<br/>
-    Jeżeli masz jakieś sugestie, lub chcesz zostawić konstruktywną krytykę, skontaktuj się pod adresem <a href="mailto:me@m4sk.in">me@m4sk.in</a>, lub utwórz zgłoszenie na <a href="https://github.com/m4sk1n/8values">GitHubie</a>.</p>
-<br/>
-<h2>Autorzy</h2>
-<p>Autorem tłumaczenia jest <a href="https://mstdn.m4sk.in/@m4sk1n">Marcin Mikołajczak</a>.<br/><br/>
-Za wkład dziękuję następującym osobom (alfabetycznie):<br/>
-<a href="https://facebook.com/kokardkiangelbows/">Angela Wawrzyk</a><br/>
-Anna Wachnowicz<br/>
-<a href="http://janmolak.com/">Jan Molak</a><br/>
-Kajetan Herkt<br/>
-<a href="http://blog.my-poi.pl">Maciej Tokarz</a><br/>
-Marcel Kowalczyk<br/>
-Marcin Boruciński<br/>
-Mateusz Kuć<br/>
-<a href="http://szymonzak.pl">Szymon Zak</a></p>
-<br/>
-<h2>Od autora tłumaczenia</h2>
-<p>Dokonałem tego tłumaczenia w wolnym czasie, na prośbę kilku osób. Oprócz tego, zajmuję się tłumaczeniem pewnych projektów, takich jak zdecentralizowana, odporna na monopol i cenzurę <a href="https://joinmastodon.org">sieć społecznościowa Mastodon</a> (na którą serdecznie Was zapraszam, <a href="https://glitch.social/@MarcinMikolajczak">tutaj moje konto</a>) i inne oprogramowanie open source. Chcesz wesprzeć moją pracę i pomóc w opłaceniu domeny? Możesz pozostawić symboliczną dotację. ;)</p><script src="https://pl.liberapay.com/m4sk1n/widgets/button.js"></script> <noscript><a href="https://pl.liberapay.com/m4sk1n/donate"><img alt="Przekaż dotację" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
-<!-- Website visit statistics - no personal information is collected! -->
-<script type="text/javascript">
-var sc_project=11325211;
-var sc_invisible=1;
-var sc_security="fd9f0659";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web stats"
+    <h2 data-i18n="faq_values"></h2>
+    <p data-i18n="faq_values_answer"></p>
+    <p data-i18n="equality" class="value-description"></p>
+    <p data-i18n="wealth" class="value-description"></p>
+    <p data-i18n="might" class="value-description"></p>
+    <p data-i18n="peace" class="value-description"></p>
+    <p data-i18n="liberty" class="value-description"></p>
+    <p data-i18n="authority" class="value-description"></p>
+    <p data-i18n="tradition" class="value-description"></p>
+    <p data-i18n="progress" class="value-description"></p>
+    <h2 data-i18n="faq_match"></h2>
+    <p data-i18n="faq_match_answer"></p>
+    <h2 data-i18n="faq_scores"></h2>
+    <p data-i18n="faq_scores_answer"></p>
+    <h2 data-i18n="authors"></h2>
+    <p data-i18n="authors_answer"></p>
+    <h2 data-i18n="about_me"></h2>
+    <p data-i18n="about_me_answer"></p>
+    <script type="text/javascript">
+        i18n_load_ns(["translation", "values"])
+    </script>
+
+    <script src="https://pl.liberapay.com/m4sk1n/widgets/button.js"></script> <noscript><a href="https://pl.liberapay.com/m4sk1n/donate"><img alt="Przekaż dotację" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+    <!-- Website visit statistics - no personal information is collected! -->
+    <script type="text/javascript">
+        var sc_project = 11325211;
+        var sc_invisible = 1;
+        var sc_security = "fd9f0659";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="web stats"
 href="http://statcounter.com/" target="_blank"><img
 class="statcounter"
 src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
 stats"></a></div></noscript>
 
-<!-- This is the script for the page itself -->
-<script type="application/javascript"src="questions.js"></script>
-<script type="text/javascript">
-    document.getElementById("numOfQuestions").innerHTML = questions.length;
-</script>
+    <!-- This is the script for the page itself -->
+    <script type="application/javascript" src="questions.js"></script>
+    <!--<script type="text/javascript">
+        document.getElementById("numOfQuestions").innerHTML = questions.length;
+    </script> -->
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- reklama -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9774640362983169"
-     data-ad-slot="4261780154"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 </body>
-

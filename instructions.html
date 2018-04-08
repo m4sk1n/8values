@@ -1,52 +1,44 @@
 <head>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-<link href='style.css' rel='stylesheet' type='text/css'>
-<title>Test 8values</title>
-<link rel="icon" type="x-icon" href="icon.png">
-<link rel="shortcut icon" type="x-icon" href="icon.png">
-<meta charset="utf-8">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9774640362983169",
-    enable_page_level_ads: true
-  });
-</script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>Test 8values</title>
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
 </head>
+
 <body>
+    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
+    <script type="application/javascript" src="i18n.js"></script>
 
-<h1>8values</h1>
-<hr>
-<h2 style="text-align:center;">Instrukcja</h2>
-<p class="question">Otrzymasz serię zdań. Przy każdym, wybierz przycisk odzwierciedlający Twoją opinię na pogląd.</p>
-<button class="button" onclick="location.href='quiz.html';" style="background-color: #2196f3;">Rozumiem!</button> <br>
-<button class="button" onclick="location.href='index.html';" style="background-color: #f44336;">Poczekaj, nie rozumiem!</button> <br>
+    <h1>8values</h1>
+    <hr>
+    <h2 data-i18n="title" data-ns="instructions" style="text-align:center;"></h2>
+    <p data-i18n="description" data-ns="instructions" class="question"></p>
+    <button data-i18n="confirm" data-ns="instructions" class="button" onclick="location.href='quiz.html';" style="background-color: #2196f3;"></button> <br>
+    <button data-i18n="cancel" data-ns="instructions" class="button" onclick="location.href='index.html';" style="background-color: #f44336;"></button> <br>
 
-<!-- Website visit statistics - no personal information is collected! -->
-<script type="text/javascript">
-var sc_project=11325211;
-var sc_invisible=1;
-var sc_security="fd9f0659";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web stats"
+    <script type="text/javascript">
+        i18n_load_ns("instructions")
+    </script>
+
+    <!-- Website visit statistics - no personal information is collected! -->
+    <script type="text/javascript">
+        var sc_project = 11325211;
+        var sc_invisible = 1;
+        var sc_security = "fd9f0659";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="web stats"
 href="http://statcounter.com/" target="_blank"><img
 class="statcounter"
 src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
 stats"></a></div></noscript>
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- reklama -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9774640362983169"
-     data-ad-slot="4261780154"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 </body>

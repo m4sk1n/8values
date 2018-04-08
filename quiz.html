@@ -1,112 +1,114 @@
 <head>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-<link href='style.css' rel='stylesheet' type='text/css'>
-<title>Test 8values</title>
-<link rel="icon" type="x-icon" href="icon.png">
-<link rel="shortcut icon" type="x-icon" href="icon.png">
-<meta charset="utf-8">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9774640362983169",
-    enable_page_level_ads: true
-  });
-</script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>Test 8values</title>
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
 </head>
-<body>
-<script type="application/javascript"
-        src="questions.js">
-</script>
-<h1>8values</h1>
-<hr>
-<h2 style="text-align:center;" id="question-number">Ładowanie...</h2>
-<p class="question" id="question-text"></p>
-<button class="button" onclick="next_question( 1.0)" style="background-color: #1b5e20;">W pełni zgadzam się</button> <br>
-<button class="button" onclick="next_question( 0.5)" style="background-color: #4caf50;">Zgadzam się</button> <br>
-<button class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;">Nie jestem pewny/a</button> <br>
-<button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;">Nie zgadzam się</button> <br>
-<button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">Zdecydowanie nie zgadzam się</button> <br>
-<button class="small_button" onclick="prev_question()" id="back_button">Wróć</button>
-<button class="small_button_off" id="back_button_off">Wróć</button><br>
 
-<!-- Website visit statistics - no personal information is collected! -->
-<script type="text/javascript">
-var sc_project=11325211;
-var sc_invisible=1;
-var sc_security="fd9f0659";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web stats"
+<body>
+    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
+    <script type="application/javascript" src="questions.js"></script>
+    <script type="application/javascript" src="i18n.js"></script>
+
+    <h1>8values</h1>
+    <hr>
+    <h2 style="text-align:center;" id="question-number" data-i18n="question_no" data-ns="quiz">Loading…</h2>
+    <p class="question" id="question-text" data-ns="questions"></p>
+    <button class="button" onclick="next_question( 1.0)" style="background-color: #1b5e20;" data-i18n="strongly_agree" data-ns="quiz"></button> <br>
+    <button class="button" onclick="next_question( 0.5)" style="background-color: #4caf50;" data-i18n="agree" data-ns="quiz"></button> <br>
+    <button class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;" data-i18n="neutral" data-ns="quiz"></button> <br>
+    <button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;" data-i18n="disagree" data-ns="quiz"></button> <br>
+    <button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;" data-i18n="strongly_disagree" data-ns="quiz"></button> <br>
+    <button class="small_button" onclick="prev_question()" id="back_button" data-i18n="back"></button>
+    <button class="small_button_off" id="back_button_off" data-i18n="back"></button><br>
+
+    <!-- Website visit statistics - no personal information is collected! -->
+    <script type="text/javascript">
+        var sc_project = 11325211;
+        var sc_invisible = 1;
+        var sc_security = "fd9f0659";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" +
+            scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript><div class="statcounter"><a title="web stats"
 href="http://statcounter.com/" target="_blank"><img
 class="statcounter"
 src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
 stats"></a></div></noscript>
 
-<!-- JavaScript for the test itself -->
-<script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    var econ, dipl, govt, scty; // User's scores
-    econ = dipl = govt = scty = 0;
-    var qn = 0; // Question number
-    var prev_answer = null;
-    init_question();
-    function init_question() {
-        document.getElementById("question-text").innerHTML = questions[qn].question;
-        document.getElementById("question-number").innerHTML = (qn + 1) + " pytanie z " + (questions.length);
-        if (prev_answer == null) {
-            document.getElementById("back_button").style.display = 'none';
-            document.getElementById("back_button_off").style.display = 'block';
-        } else {
-            document.getElementById("back_button").style.display = 'block';
-            document.getElementById("back_button_off").style.display = 'none';
+    <!-- JavaScript for the test itself -->
+
+    <script>
+        i18n_load_ns(["questions", "quiz", "translation"], display_progress)
+        var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
+        max_econ = max_dipl = max_govt = max_scty = 0;
+        var econ, dipl, govt, scty; // User's scores
+        econ = dipl = govt = scty = 0;
+        var qn = 0; // Question number
+        var prev_answer = null;
+
+        function display_progress() {
+            document.getElementById("question-text").dataset.i18n = questions[qn].question
+            document.getElementById("question-number").dataset.current = qn + 1
+            document.getElementById("question-number").dataset.total = questions.length
+            i18n_ready()
+            if (prev_answer == null) {
+                document.getElementById("back_button").style.display = 'none';
+                document.getElementById("back_button_off").style.display = 'block';
+            } else {
+                document.getElementById("back_button").style.display = 'block';
+                document.getElementById("back_button_off").style.display = 'none';
+            }
         }
 
-    }
-
-    function next_question(mult) {
-        econ += mult*questions[qn].effect.econ
-        dipl += mult*questions[qn].effect.dipl
-        govt += mult*questions[qn].effect.govt
-        scty += mult*questions[qn].effect.scty
-            max_econ += Math.abs(mult*questions[qn].effect.econ)
-            max_dipl += Math.abs(mult*questions[qn].effect.dipl)
-            max_govt += Math.abs(mult*questions[qn].effect.govt)
-            max_scty += Math.abs(mult*questions[qn].effect.scty)
-        qn++;
-        prev_answer = mult;
-        if (qn < questions.length) {
-            init_question();
-        } else {
-            results();
+        function next_question(mult) {
+            econ += mult * questions[qn].effect.econ
+            dipl += mult * questions[qn].effect.dipl
+            govt += mult * questions[qn].effect.govt
+            scty += mult * questions[qn].effect.scty
+                max_econ += Math.abs(mult*questions[qn].effect.econ)
+                max_dipl += Math.abs(mult*questions[qn].effect.dipl)
+                max_govt += Math.abs(mult*questions[qn].effect.govt)
+                max_scty += Math.abs(mult*questions[qn].effect.scty)
+            qn++;
+            prev_answer = mult;
+            if (qn < questions.length) {
+                display_progress()
+            } else {
+                results()
+            }
         }
-    }
-    function prev_question() {
-        if (prev_answer == null) {
-            return;
-        }
-        qn--;
-        econ -= prev_answer * questions[qn].effect.econ;
-        dipl -= prev_answer * questions[qn].effect.dipl;
-        govt -= prev_answer * questions[qn].effect.govt;
-        scty -= prev_answer * questions[qn].effect.scty;
-        prev_answer = null;
-        init_question();
 
-    }
-    function calc_score(score,max) {
-        return (100*((score+max)/max/2)).toFixed(1)
-    }
-    function results() {
-        location.href = `results.html`
-            + `?e=${calc_score(econ,max_econ+0.000001)}`
-            + `&d=${calc_score(dipl,max_dipl+0.000001)}`
-            + `&g=${calc_score(govt,max_govt+0.000001)}`
-            + `&s=${calc_score(scty,max_scty+0.000001)}`
-    }
-</script>
+        function prev_question() {
+            if (prev_answer == null) {
+                return;
+            }
+            qn--;
+            econ -= prev_answer * questions[qn].effect.econ;
+            dipl -= prev_answer * questions[qn].effect.dipl;
+            govt -= prev_answer * questions[qn].effect.govt;
+            scty -= prev_answer * questions[qn].effect.scty;
+            prev_answer = null;
+            display_progress();
+        }
+
+        function calc_score(score, max) {
+            return (100 * ((score + max) / max / 2)).toFixed(1)
+        }
+
+        function results() {
+            location.href = `results.html` +
+                `?e=${calc_score(econ,max_econ+0.000001)}` +
+                `&d=${calc_score(dipl,max_dipl+0.000001)}` +
+                `&g=${calc_score(govt,max_govt+0.000001)}` +
+                `&s=${calc_score(scty,max_scty+0.000001)}`
+        } 
+    </script>
 </body>

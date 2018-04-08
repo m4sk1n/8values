@@ -1,6 +1,6 @@
 questions = [
     {
-        "question": "Nacisk ze strony korporacji jest bardziej niepokojący od nacisku ze strony rządu.",
+        "question": "q1",
         "effect": {
             "econ": 10,
             "dipl": 0,
@@ -9,7 +9,7 @@ questions = [
         }
     },
     {
-        "question": "Konieczne jest, aby rząd ingerował w ekonomię w celu ochrony konsumentów.",
+        "question": "q2",
         "effect": {
             "econ": 10,
             "dipl": 0,
@@ -18,7 +18,7 @@ questions = [
         }
     },
     {
-        "question": "Im większa swoboda rynku, tym większa swoboda dla ludzi.",
+        "question": "q3",
         "effect": {
             "econ": -10,
             "dipl": 0,
@@ -27,7 +27,7 @@ questions = [
         }
     },
     {
-        "question": "Lepiej utrzymywać zrównoważony budżet, niż zapewniać dobrobyt wszystkim obywatelom.",
+        "question": "q4",
         "effect": {
             "econ": -10,
             "dipl": 0,
@@ -36,7 +36,7 @@ questions = [
         }
     },
     {
-        "question": "Publicznie finansowane badania naukowe są bardziej korzystne dla ludzkości od pozostawiania tego firmom.",
+        "question": "q5",
         "effect": {
             "econ": 10,
             "dipl": 0,
@@ -45,7 +45,7 @@ questions = [
         }
     },
     {
-        "question": "Handel międzynarodowy przynosi korzyści.",
+        "question": "q6",
         "effect": {
             "econ": -5,
             "dipl": 0,
@@ -54,7 +54,7 @@ questions = [
         }
     },
     {
-        "question": "Każdy według swoich zdolności, każdemu według jego potrzeb.",
+        "question": "q7",
         "effect": {
             "econ": 10,
             "dipl": 0,
@@ -63,7 +63,7 @@ questions = [
         }
     },
     {
-        "question": "Programy socjalne powinny zostać zniesione na rzecz prywatnych działań charytatywnych.",
+        "question": "q8",
         "effect": {
             "econ": -10,
             "dipl": 0,
@@ -72,7 +72,7 @@ questions = [
         }
     },
     {
-        "question": "Podatki powinny być wyższe dla bogatszych, aby wspomóc biedniejszych.",
+        "question": "q9",
         "effect": {
             "econ": 10,
             "dipl": 0,
@@ -81,7 +81,7 @@ questions = [
         }
     },
     {
-        "question": "Dziedziczenie jest uzasadnioną przyczyną bogactwa.",
+        "question": "q10",
         "effect": {
             "econ": -10,
             "dipl": 0,
@@ -90,7 +90,7 @@ questions = [
         }
     },
     {
-        "question": "Obiekty użyteczności publicznej, tj. drogi i elektryczność powinny być własnością publiczną.",
+        "question": "q11",
         "effect": {
             "econ": 10,
             "dipl": 0,
@@ -99,7 +99,7 @@ questions = [
         }
     },
     {
-        "question": "Nadmierna ingerencja rządu jest zagrożeniem dla gospodarki.",
+        "question": "q12",
         "effect": {
             "econ": -10,
             "dipl": 0,
@@ -108,7 +108,7 @@ questions = [
         }
     },
     {
-        "question": "Osoby płacące więcej zasługują na lepszą służbę zdrowia.",
+        "question": "q13",
         "effect": {
             "econ": -10,
             "dipl": 0,
@@ -117,7 +117,7 @@ questions = [
         }
     },
     {
-        "question": "Dobra jakość edukacji należy się każdemu.",
+        "question": "q14",
         "effect": {
             "econ": 10,
             "dipl": 0,
@@ -126,7 +126,7 @@ questions = [
         }
     },
     {
-        "question": "Środki produkcji powinny należeć do pracowników, którzy ich używają.",
+        "question": "q15",
         "effect": {
             "econ": 10,
             "dipl": 0,
@@ -135,7 +135,7 @@ questions = [
         }
     },
     {
-        "question": "Organizacja Narodów Zjednoczonych powinna zostać zniesiona.",
+        "question": "q16",
         "effect": {
             "econ": 0,
             "dipl": -10,
@@ -144,7 +144,7 @@ questions = [
         }
     },
     {
-        "question": "Działania wojskowe naszego narodu są często wymagane by zapewnić nam bezpieczeństwo.",
+        "question": "q17",
         "effect": {
             "econ": 0,
             "dipl": -10,
@@ -153,7 +153,7 @@ questions = [
         }
     },
     {
-        "question": "Popieram unie narodów, takie jak Unia Europejska.",
+        "question": "q18",
         "effect": {
             "econ": -5,
             "dipl": 10,
@@ -162,7 +162,7 @@ questions = [
         }
     },
     {
-        "question": "Ważne jest dbanie o suwerenność narodu.",
+        "question": "q19",
         "effect": {
             "econ": 0,
             "dipl": -10,
@@ -171,7 +171,7 @@ questions = [
         }
     },
     {
-        "question": "Zjednoczony rząd światowy byłby korzystny dla ludzkości.",
+        "question": "q20",
         "effect": {
             "econ": 0,
             "dipl": 10,
@@ -180,7 +180,7 @@ questions = [
         }
     },
     {
-        "question": "Ważniejsze od wzmacniania siły jest zachowywanie pokojowych relacji.",
+        "question": "q21",
         "effect": {
             "econ": 0,
             "dipl": 10,
@@ -189,7 +189,7 @@ questions = [
         }
     },
     {
-        "question": "Państwa nie muszą tłumaczyć się przed innymi państwami z prowadzonych przez siebie wojen.",
+        "question": "q22",
         "effect": {
             "econ": 0,
             "dipl": -10,
@@ -198,7 +198,7 @@ questions = [
         }
     },
     {
-        "question": "Inwestowanie w zbrojenie jest stratą pieniędzy.",
+        "question": "q23",
         "effect": {
             "econ": 0,
             "dipl": 10,
@@ -207,7 +207,7 @@ questions = [
         }
     },
     {
-        "question": "Pomoc międzynarodowa jest stratą pieniędzy.",
+        "question": "q24",
         "effect": {
             "econ": -5,
             "dipl": -10,
@@ -216,7 +216,7 @@ questions = [
         }
     },
     {
-        "question": "Mój naród jest wspaniały.",
+        "question": "q25",
         "effect": {
             "econ": 0,
             "dipl": -10,
@@ -225,7 +225,7 @@ questions = [
         }
     },
     {
-        "question": "Badania naukowe powinny być prowadzone międzynarodowo.",
+        "question": "q26",
         "effect": {
             "econ": 0,
             "dipl": 10,
@@ -234,7 +234,7 @@ questions = [
         }
     },
     {
-        "question": "Rządy powinny być odpowiedzialne przed społecznością międzynarodową.",
+        "question": "q27",
         "effect": {
             "econ": 0,
             "dipl": 10,
@@ -243,7 +243,7 @@ questions = [
         }
     },
     {
-        "question": "Nawet jeśli protestujemy przeciwko autorytetarnemu rządowi, nie powinniśmy używać przemocy.",
+        "question": "q28",
         "effect": {
             "econ": 0,
             "dipl": 5,
@@ -252,7 +252,7 @@ questions = [
         }
     },
     {
-        "question": "Moje wartości religijne powinny być rozprzestrzeniane tak, jak to tylko możliwe.",
+        "question": "q29",
         "effect": {
             "econ": 0,
             "dipl": -5,
@@ -261,7 +261,7 @@ questions = [
         }
     },
     {
-        "question": "Wartości mojego narodu powinny być rozprzestrzeniane tak, jak to tylko możliwe.",
+        "question": "q30",
         "effect": {
             "econ": 0,
             "dipl": -10,
@@ -270,7 +270,7 @@ questions = [
         }
     },
     {
-        "question": "Zachowanie prawa i porządku jest bardzo ważne.",
+        "question": "q31",
         "effect": {
             "econ": 0,
             "dipl": -5,
@@ -279,7 +279,7 @@ questions = [
         }
     },
     {
-        "question": "Ogół ludności podejmuje złe decyzje.",
+        "question": "q32",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -288,7 +288,7 @@ questions = [
         }
     },
     {
-        "question": "Niezagrażające innym przestępstwa (tj. zażywanie narkotyków) nie powinny być przestępstwami.",
+        "question": "q33",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -297,7 +297,7 @@ questions = [
         }
     },
     {
-        "question": "Ograniczenie pewnych wolności jest uzasadnione w przypadku obrony przed terroryzmem.",
+        "question": "q34",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -306,7 +306,7 @@ questions = [
         }
     },
     {
-        "question": "Inwigilacja przez rząd jest konieczna w obecnym świecie.",
+        "question": "q35",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -315,7 +315,7 @@ questions = [
         }
     },
     {
-        "question": "Samo istnienie państw jest zagrożeniem dla naszej wolności.",
+        "question": "q36",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -324,7 +324,7 @@ questions = [
         }
     },
     {
-        "question": "Niezależne od poglądów politycznych, należy stać po stronie swojego państwa.",
+        "question": "q37",
         "effect": {
             "econ": 0,
             "dipl": -10,
@@ -333,7 +333,7 @@ questions = [
         }
     },
     {
-        "question": "Każdy autorytet może zostać zakwestionowany.",
+        "question": "q38",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -342,7 +342,7 @@ questions = [
         }
     },
     {
-        "question": "Hierarchia stanowa jest najlepsza.",
+        "question": "q39",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -351,7 +351,7 @@ questions = [
         }
     },
     {
-        "question": "Ważne jest, aby rząd podążał za opinią większości, nawet gdy są w błędzie.",
+        "question": "q40",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -360,7 +360,7 @@ questions = [
         }
     },
     {
-        "question": "Im silniejsi przywódcy, tym lepiej.",
+        "question": "q41",
         "effect": {
             "econ": 0,
             "dipl": -10,
@@ -369,7 +369,7 @@ questions = [
         }
     },
     {
-        "question": "Demokracja to nie tylko podejmowanie wyborów.",
+        "question": "q42",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -378,7 +378,7 @@ questions = [
         }
     },
     {
-        "question": "Regulacje dot. środowiska to podstawa.",
+        "question": "q43",
         "effect": {
             "econ": 5,
             "dipl": 0,
@@ -387,7 +387,7 @@ questions = [
         }
     },
     {
-        "question": "Automatyzacja, nauka i technologia uczynią świat lepszym.",
+        "question": "q44",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -396,7 +396,7 @@ questions = [
         }
     },
     {
-        "question": "Dzieci powinny być wychowywane w zgodzie z wartościami religijnymi lub tradycyjnymi.",
+        "question": "q45",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -405,7 +405,7 @@ questions = [
         }
     },
     {
-        "question": "Tradycje nie mają wartości same w sobie.",
+        "question": "q46",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -414,7 +414,7 @@ questions = [
         }
     },
     {
-        "question": "Religia powinna odgrywać role w rządzie.",
+        "question": "q47",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -423,7 +423,7 @@ questions = [
         }
     },
     {
-        "question": "Kościoły powinny być opodatkowane tak, jak inne instytucje.",
+        "question": "q48",
         "effect": {
             "econ": 5,
             "dipl": 0,
@@ -432,7 +432,7 @@ questions = [
         }
     },
     {
-        "question": "Zmiany w klimacie są jednym z największych zagrożeń obecnego świata.",
+        "question": "q49",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -441,7 +441,7 @@ questions = [
         }
     },
     {
-        "question": "Ważne jest, abyśmy wspólnie pracowali, by zwalczyć zmiany w klimacie.",
+        "question": "q50",
         "effect": {
             "econ": 0,
             "dipl": 10,
@@ -450,7 +450,7 @@ questions = [
         }
     },
     {
-        "question": "Społeczność była lepsza wiele lat temu, porównując do obecnej.",
+        "question": "q51",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -459,7 +459,7 @@ questions = [
         }
     },
     {
-        "question": "Ważne jest, aby zachowywać wieloletnie tradycje.",
+        "question": "q52",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -468,7 +468,7 @@ questions = [
         }
     },
     {
-        "question": "Ważne jest, by myśleć długoterminowo, wykraczając poza okres naszego życia.",
+        "question": "q53",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -477,7 +477,7 @@ questions = [
         }
     },
     {
-        "question": "Kierowanie się rozsądkiem jest ważniejsze od utrzymywania naszej kultury.",
+        "question": "q54",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -486,7 +486,7 @@ questions = [
         }
     },
     {
-        "question": "Dostęp do narkotyków powinien zostać zalegalizowany.",
+        "question": "q55",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -495,7 +495,7 @@ questions = [
         }
     },
     {
-        "question": "Małżeństwa osób tej samej płci powinny być dozwolone.",
+        "question": "q56",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -504,7 +504,7 @@ questions = [
         }
     },
     {
-        "question": "Żadna kultura nie może być uważana za lepszą od innej.",
+        "question": "q57",
         "effect": {
             "econ": 0,
             "dipl": 10,
@@ -513,7 +513,7 @@ questions = [
         }
     },
     {
-        "question": "Seks pozamałżeński jest niemoralny.",
+        "question": "q58",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -522,7 +522,7 @@ questions = [
         }
     },
     {
-        "question": "Jeżeli zgodzimy się na przyjęcie migrantów, ważne jest, aby zasymilowali się w naszej kulturze.",
+        "question": "q59",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -531,7 +531,7 @@ questions = [
         }
     },
     {
-        "question": "Aborcja powinna być zakazana w większości lub we wszystkich przypadkach.",
+        "question": "q60",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -540,7 +540,7 @@ questions = [
         }
     },
     {
-        "question": "Zezwolenie na posiadanie broni powinno być dostępne tylko z odpowiedniej przyczyny.",
+        "question": "q61",
         "effect": {
             "econ": 0,
             "dipl": 10,
@@ -549,7 +549,7 @@ questions = [
         }
     },
     {
-        "question": "Popieram uniwersalną i opłacaną z podatków służbę zdrowia.",
+        "question": "q62",
         "effect": {
             "econ": 10,
             "dipl": 0,
@@ -558,7 +558,7 @@ questions = [
         }
     },
     {
-        "question": "Prostytucja powinna być nielegalna.",
+        "question": "q63",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -567,7 +567,7 @@ questions = [
         }
     },
     {
-        "question": "Dbanie o wartości rodzinne to podstawa.",
+        "question": "q64",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -576,7 +576,7 @@ questions = [
         }
     },
     {
-        "question": "Dążenie za postępem za wszelką cenę jest niebezpieczne.",
+        "question": "q65",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -585,7 +585,7 @@ questions = [
         }
     },
     {
-        "question": "Modyfikacje genetyczne są dobre i pożądane, nawet gdy dokonywane są na ludziach.",
+        "question": "q66",
         "effect": {
             "econ": 0,
             "dipl": 0,
@@ -594,7 +594,7 @@ questions = [
         }
     },
     {
-        "question": "Powinniśmy otworzyć nasze granice dla imigrantów.",
+        "question": "q67",
         "effect": {
             "econ": 0,
             "dipl": 10,
@@ -603,7 +603,7 @@ questions = [
         }
     },
     {
-        "question": "Rządy powinny mieć na uwadze potrzeby wszystkich mieszkańców kraju, nie tylko swoich obywateli.",
+        "question": "q68",
         "effect": {
             "econ": 10,
             "dipl": 10,
@@ -612,7 +612,7 @@ questions = [
         }
     },
     {
-        "question": "Wszyscy ludzie – niezależnie od kultury i orientacji seksualnej – powinni być równo traktowani.",
+        "question": "q69",
         "effect": {
             "econ": 10,
             "dipl": 10,
@@ -621,7 +621,7 @@ questions = [
         }
     },
     {
-        "question": "Cele mojej grupy są ważniejsze od pozostałych.",
+        "question": "q70",
         "effect": {
             "econ": -10,
             "dipl": -10,
