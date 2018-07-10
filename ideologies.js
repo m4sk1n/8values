@@ -170,7 +170,7 @@ ideologies = {
     "ideo29": {
         "econ": 50,
         "dipl": 50,
-        "govt": 0,
+        "govt": 100,
         "scty": 20
     },
     "ideo30": {
