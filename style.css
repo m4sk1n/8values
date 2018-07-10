@@ -82,6 +82,18 @@ a {
     margin: -2px auto;
     cursor: pointer;
 }
+.lang_button {
+    background-color: #333;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    border: none;
+    border-radius: 8pt;
+    color: white;
+    padding: 8pt;
+    text-decoration: none;
+    font-size: 9pt;
+    margin: -2px auto;
+    cursor: pointer;
+}
 .small_button, .small_button_off {
     background-color: #333;
     font-family: 'Montserrat', 'Roboto', sans-serif;
