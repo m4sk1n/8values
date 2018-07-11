@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <button class="lang_button small_button" onclick="location.href=location.href+'&lng=pl';">Polski</button>
-    <button class="lang_button small_button" onclick="location.href=location.href+'&lng=en';">English</button>
+    <button class="lang_button small_button" onclick="i18next.changeLanguage('pl'); location.reload();">Polski</button>
+    <button class="lang_button small_button" onclick="i18next.changeLanguage('en'); location.reload();">English</button>
     <button data-i18n="switch_theme" class="theme_button small_button" onclick="switch_theme();"></button>
     <h1>8values</h1>
     <hr>
@@ -97,7 +97,7 @@
     <canvas id="banner" width=800 height=650 style="font-family:Montserrat"></canvas>
     <h2><span data-i18n="you_here"></span></h2>
     <p data-i18n="you_here_desc"></p><br/>
-    <button data-i18n="back" class="button" onclick="location.href='index.html';" style="background-color: #2196f3;"></button> <br>
+    <button data-i18n="back" class="button" onclick="localStorage.removeItem('state'); location.href='index.html';" style="background-color: #2196f3;"></button> <br>
 
     <script type="text/javascript">
         theme_load()
@@ -105,13 +105,11 @@
 
     <!-- Website visit statistics - no personal information is collected! -->
     <script type="text/javascript">
-    var sc_project=11583818; 
-    var sc_invisible=1; 
-    var sc_security="9cb09cdc"; 
+        var sc_project = 11583818;
+        var sc_invisible = 1;
+        var sc_security = "9cb09cdc";
     </script>
-    <script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
     <noscript><div class="statcounter"><a title="Web Analytics"
 href="http://statcounter.com/" target="_blank"><img
 class="statcounter"

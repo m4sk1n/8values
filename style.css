@@ -93,6 +93,7 @@ a {
 
 .small_button, .small_button_off {
     background-color: #333;
+    display: inline-block;
     font-family: 'Montserrat', 'Roboto', sans-serif;
     border: none;
     border-radius: 8pt;
@@ -106,6 +107,11 @@ a {
     font-size: 18pt;
     margin: -2px auto;
     cursor: pointer;
+}
+
+.small_button_alert {
+    background-color: #f44336;
+    width: initial;
 }
 
 .small_button_off {

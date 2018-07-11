@@ -10,7 +10,7 @@
     "faq_scores_answer": "¯\\_(ツ)_/¯<br/>If you have any suggestions or constructive criticism, feel free to send it to <a href=\"mailto:me@m4sk.in\">me@m4sk.in</a> or open an issue on the GitHub page here: <a href=\"https://github.com/m4sk1n/8values\">GitHub Page</a>",
 
     "authors": "Authors",
-    "authors_answer": "This version of 8values (forked from <a href=\"https://github.com/8values/8values.github.io\">original</a>) is maintained by <a href=\"https://101010.pl/@m4sk1n\">Marcin Mikołajczak</a>.<br>Thanks to <a href=\"https://github.com/8values/8values.github.io/graphs/contributors\">all contributors</a> from original 8values, <a href=\"https://github.com/gervasiocaj\">gervasiocaj</a> for localization support and <a href=\"https://github.com/brmbrmcar\">brmbrmcar</a> for improving scores calculation.",
+    "authors_answer": "This version of 8values (forked from <a href=\"https://github.com/8values/8values.github.io\">original</a>) is maintained by <a href=\"https://101010.pl/@m4sk1n\">Marcin Mikołajczak</a>.<br>Thanks to <a href=\"https://github.com/8values/8values.github.io/graphs/contributors\">all contributors</a> from original 8values, <a href=\"https://github.com/gervasiocaj\">gervasiocaj</a> for localization support, <a href=\"https://github.com/t2n\">t2n</a> for progress saving and <a href=\"https://github.com/brmbrmcar\">brmbrmcar</a> for improving scores calculation.",
     "about_me": "From maintainer of this fork",
     "about_me_answer": "It started as Polish translation I made because some people asked me to do it. Besides this, I spend a lot of time on translating open source projects like decentralised, antimonopolistic and censorship-resistant <a href=\"https://joinmastodon.org\">Mastodon social network</a> (I really recommend it to you, <a href=\"https://101010.pl/@m4sk1n\">here’s my account</a>). If you would like to support my work, you can leave me a symbolic donation on <a href=\"https://liberapay.com/m4sk1n/donate\">LiberaPay</a> or <a href=\"https://paypal.me/MarcinMikolajczak\">PayPal</a>. Thanks ;)",
 
@@ -35,5 +35,6 @@
     "you_here_desc": "Feel free to share your results with friends on your favourite social media. You can also follow <a href=\"https://101010.pl/@m4sk1n\">me</a> on the free, decentralized and censorship-resistant Mastodon social network… ;)",
 
     "back": "Back",
+    "start_over": "Start over",
     "switch_theme": "Switch theme"
 }
