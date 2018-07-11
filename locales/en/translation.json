@@ -36,5 +36,7 @@
 
     "back": "Back",
     "start_over": "Start over",
-    "switch_theme": "Switch theme"
+    "switch_theme": "Switch theme",
+
+    "confirm": "Are you sure you want to reset your progress?"
 }

@@ -125,8 +125,10 @@ Analytics"></a></div></noscript>
         }
 
         function start_over() {
-            localStorage.removeItem('state');
-            location.reload();
+            if(confirm(i18next.t('confirm'))) {
+                localStorage.removeItem('state');
+                location.reload();
+            }
         }
 
         function calc_score(score, max) {

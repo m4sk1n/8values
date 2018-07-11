@@ -36,5 +36,7 @@
 
     "back": "Wróć",
     "start_over": "Rozpocznij od nowa",
-    "switch_theme": "Przełącz motyw"
+    "switch_theme": "Przełącz motyw",
+
+    "confirm": "Czy na pewno chcesz utracić cały postęp i zacząć od nowa?"
 }
