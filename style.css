@@ -2,6 +2,7 @@ html {
     background-color: #bbbbbb;
     padding: 0px;
 }
+
 body {
     width: 80%;
     min-height: calc(100vh - 4em);
@@ -13,6 +14,7 @@ body {
     border-right-style: solid;
     border-width: 20px;
 }
+
 p {
     color: #444444;
     font-family: 'Roboto', sans-serif;
@@ -20,10 +22,12 @@ p {
     line-height: 1;
     margin: 4pt;
 }
+
 p.value-description {
     text-indent: -16pt;
     margin-left: 20pt;
 }
+
 p.question {
     margin: 16pt auto;
     color: #333333;
@@ -40,8 +44,8 @@ p.question {
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
+
 h1 {
     color: #222222;
     font-family: 'Montserrat', 'Roboto', sans-serif;
@@ -51,6 +55,7 @@ h1 {
     margin-top: 0pt;
     margin-bottom: 0pt;
 }
+
 h2 {
     color: #333333;
     font-family: 'Montserrat', 'Roboto', sans-serif;
@@ -59,13 +64,16 @@ h2 {
     margin-top: 12pt;
     margin-bottom: 0pt;
 }
+
 li {
     font-size: 16pt;
     text-indent: 16pt;
 }
+
 a {
     font-family: inherit;
 }
+
 .button {
     background-color: #2196f3;
     font-family: 'Montserrat', 'Roboto', sans-serif;
@@ -82,18 +90,7 @@ a {
     margin: -2px auto;
     cursor: pointer;
 }
-.lang_button {
-    background-color: #333;
-    font-family: 'Montserrat', 'Roboto', sans-serif;
-    border: none;
-    border-radius: 8pt;
-    color: white;
-    padding: 8pt;
-    text-decoration: none;
-    font-size: 9pt;
-    margin: -2px auto;
-    cursor: pointer;
-}
+
 .small_button, .small_button_off {
     background-color: #333;
     font-family: 'Montserrat', 'Roboto', sans-serif;
@@ -110,6 +107,7 @@ a {
     margin: -2px auto;
     cursor: pointer;
 }
+
 .small_button_off {
     background-color: #ddd;
     color: #888;
@@ -117,12 +115,31 @@ a {
     cursor: not-allowed;
     margin: -4px auto;
 }
+
+.lang_button {
+    background-color: #333;
+    width: initial;
+    min-width: initial;
+    display: initial;
+    font-size: 9pt;
+}
+
+.theme_button {
+    background-color: #333;
+    width: initial;
+    min-width: initial;
+    display: initial;
+    font-size: 9pt;
+    float: right;
+}
+
 div.axis {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 div.bar {
     height: 36pt;
     line-height: 36pt;
@@ -138,6 +155,7 @@ div.bar {
     display: block;
     width: 50%;
 }
+
 div.text-wrapper {
     font-family: 'Montserrat', 'Roboto', sans-serif;
     font-size: 36pt;
@@ -145,73 +163,91 @@ div.text-wrapper {
     color: #222222;
     display: inline-block;
 }
+
 div.equality {
     background-color: #f44336;
     text-align: left;
     border-right-style: solid;
 }
+
 div.wealth {
     background-color: #00897b;
     text-align: right;
     border-left-style: solid;
 }
+
 div.liberty {
     background-color: #ffeb3b;
     text-align: left;
     border-right-style: solid;
 }
+
 div.authority {
     background-color: #3f51b5;
     text-align: right;
     border-left-style: solid;
 }
+
 div.peace {
     background-color: #03a9f4;
     text-align: right;
     border-left-style: solid;
 }
+
 div.might {
     background-color: #ff9800;
     text-align: left;
     border-right-style: solid;
 }
+
 div.progress {
     background-color: #9c27b0;
     text-align: right;
     border-left-style: solid;
 }
+
 div.tradition {
     background-color: #8bc34a;
     text-align: left;
     border-right-style: solid;
 }
+
 b.equality {
-    color:#d32f2f;
+    color: #d32f2f;
 }
+
 b.wealth {
-    color:#00796b;
+    color: #00796b;
 }
+
 b.might {
-    color:#f57c00;
+    color: #f57c00;
 }
+
 b.peace {
-    color:#0288d1;
+    color: #0288d1;
 }
+
 b.liberty {
-    color:#fbc02d;
+    color: #fbc02d;
 }
+
 b.authority {
-    color:#303f9f;
+    color: #303f9f;
 }
+
 b.tradition {
-    color:#689f38;
+    color: #689f38;
 }
+
 b.progress {
-    color:#7b1fa2;
+    color: #7b1fa2;
 }
+
 span.weight-300 {
     font-weight: 300;
 }
+
 canvas {
     border-color: #444444;
     border-style: solid;
@@ -222,34 +258,41 @@ canvas {
     margin-left: auto;
     margin-right: auto;
 }
+
 figure {
     position: relative;
     margin: 0;
 }
+
 figure.center {
     display: block;
     margin: 1em auto;
     width: 50%;
     min-width: 500pt;
 }
+
 figure img {
     width: 100%;
 }
+
 #values {
     background: white;
 }
+
 #values figure, #values p {
     width: 23.5%;
     min-width: 100pt;
     float: left;
     margin: 5px;
 }
+
 #values p {
     text-align: center;
     font-family: Montserrat, Roboto;
     font-size: 150%;
     color: black;
 }
+
 figcaption {
     position: absolute;
     top: 75%;
@@ -260,6 +303,7 @@ figcaption {
     font-size: 150%;
     color: white;
 }
+
 figcaption.small {
     width: 100%;
     font-size: 14pt;

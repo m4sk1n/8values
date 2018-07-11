@@ -1,6 +1,7 @@
 {
-	"title": "Instrukcja",
-	"description": "Otrzymasz serię zdań. Przy każdym, wybierz przycisk odzwierciedlający Twoją opinię na pogląd.",
-	"confirm": "Rozumiem!",
-	"cancel": "Poczekaj, nie rozumiem!"
+    "title": "Instrukcja",
+    "description": "Otrzymasz serię zdań. Przy każdym, wybierz przycisk odzwierciedlający Twoją opinię na pogląd.",
+    "confirm": "Rozumiem!",
+    "cancel": "Poczekaj, nie rozumiem!",
+    "switch_theme": "Przełącz motyw"
 }

@@ -1,5 +1,4 @@
-questions = [
-    {
+questions = [{
         "question": "q1",
         "effect": {
             "econ": 10,

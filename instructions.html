@@ -5,14 +5,17 @@
     <link rel="icon" type="x-icon" href="icon.png">
     <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
-</head>
-
-<body>
     <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
     <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
     <script type="application/javascript" src="i18n.js"></script>
+    <script type="application/javascript" src="themeswitcher.js"></script>
+</head>
 
+<body>
+    <button class="lang_button small_button" onclick="location.href='?lng=pl';">Polski</button>
+    <button class="lang_button small_button" onclick="location.href='?lng=en';">English</button>
+    <button data-i18n="switch_theme" data-ns="instructions" class="theme_button small_button" onclick="switch_theme();"></button>
     <h1>8values</h1>
     <hr>
     <h2 data-i18n="title" data-ns="instructions" style="text-align:center;"></h2>
@@ -22,6 +25,9 @@
 
     <script type="text/javascript">
         i18n_load_ns("instructions")
+    </script>
+    <script type="text/javascript">
+        theme_load()
     </script>
 
     <!-- Website visit statistics - no personal information is collected! -->

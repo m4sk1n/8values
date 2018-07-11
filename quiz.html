@@ -5,15 +5,18 @@
     <link rel="icon" type="x-icon" href="icon.png">
     <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
-</head>
-
-<body>
     <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
     <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
     <script type="application/javascript" src="questions.js"></script>
     <script type="application/javascript" src="i18n.js"></script>
+    <script type="application/javascript" src="themeswitcher.js"></script>
+</head>
 
+<body>
+    <button class="lang_button small_button" onclick="location.href='?lng=pl';">Polski</button>
+    <button class="lang_button small_button" onclick="location.href='?lng=en';">English</button>
+    <button data-i18n="switch_theme" class="theme_button small_button" onclick="switch_theme();"></button>
     <h1>8values</h1>
     <hr>
     <h2 style="text-align:center;" id="question-number" data-i18n="question_no" data-ns="quiz">Loading…</h2>
@@ -25,6 +28,10 @@
     <button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;" data-i18n="strongly_disagree" data-ns="quiz"></button> <br>
     <button class="small_button" onclick="prev_question()" id="back_button" data-i18n="back"></button>
     <button class="small_button_off" id="back_button_off" data-i18n="back"></button><br>
+
+    <script type="text/javascript">
+        theme_load()
+    </script>
 
     <!-- Website visit statistics - no personal information is collected! -->
     <script type="text/javascript">
@@ -73,10 +80,10 @@ stats"></a></div></noscript>
             dipl += mult * questions[qn].effect.dipl
             govt += mult * questions[qn].effect.govt
             scty += mult * questions[qn].effect.scty
-                max_econ += Math.abs(mult*questions[qn].effect.econ)
-                max_dipl += Math.abs(mult*questions[qn].effect.dipl)
-                max_govt += Math.abs(mult*questions[qn].effect.govt)
-                max_scty += Math.abs(mult*questions[qn].effect.scty)
+            max_econ += Math.abs(mult * questions[qn].effect.econ)
+            max_dipl += Math.abs(mult * questions[qn].effect.dipl)
+            max_govt += Math.abs(mult * questions[qn].effect.govt)
+            max_scty += Math.abs(mult * questions[qn].effect.scty)
             qn++;
             prev_answer = mult;
             if (qn < questions.length) {
@@ -109,6 +116,6 @@ stats"></a></div></noscript>
                 `&d=${calc_score(dipl,max_dipl+0.000001)}` +
                 `&g=${calc_score(govt,max_govt+0.000001)}` +
                 `&s=${calc_score(scty,max_scty+0.000001)}`
-        } 
+        }
     </script>
 </body>
