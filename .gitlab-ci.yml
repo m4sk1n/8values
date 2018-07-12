@@ -1,0 +1,13 @@
+image: node:8.11.3-alpine
+before_script:
+  - apk update && apk add openssl ca-certificates
+  - npm install
+  - PATH=$(npm bin):$PATH
+pages:
+  script:
+  - npm run build
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
