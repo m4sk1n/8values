@@ -1,16 +1,9 @@
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
     <title>8values test results</title>
     <link rel="icon" type="x-icon" href="icon.png">
     <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
-    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
-    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
-    <script type="application/javascript" src="ideologies.js"></script>
-    <script type="application/javascript" src="i18n.js"></script>
-    <script type="application/javascript" src="themeswitcher.js"></script>
 </head>
 
 <body>
@@ -99,23 +92,17 @@
     <p data-i18n="you_here_desc"></p><br/>
     <button data-i18n="back" class="button" onclick="localStorage.removeItem('state'); location.href='index.html';" style="background-color: #2196f3;"></button> <br>
 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
+    <script type="application/javascript" src="ideologies.js"></script>
+    <script type="application/javascript" src="i18n.js"></script>
+    <script type="application/javascript" src="themeswitcher.js"></script>
+
     <script type="text/javascript">
         theme_load()
     </script>
-
-    <!-- Website visit statistics - no personal information is collected! -->
-    <script type="text/javascript">
-        var sc_project = 11583818;
-        var sc_invisible = 1;
-        var sc_security = "9cb09cdc";
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11583818/0/9cb09cdc/1/" alt="Web
-Analytics"></a></div></noscript>
-    <!-- End of Statcounter Code -->
 
     <script>
         function getQueryVariable(variable) {
@@ -320,5 +307,19 @@ Analytics"></a></div></noscript>
             ctx.fillText(i18next.t("societal_axis") + document.getElementById("society-label").innerHTML, 400, 535)
         }
     </script>
+
+    <!-- Website visit statistics - no personal information is collected! -->
+    <script type="text/javascript">
+        var sc_project = 11583818;
+        var sc_invisible = 1;
+        var sc_security = "9cb09cdc";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11583818/0/9cb09cdc/1/" alt="Web
+Analytics"></a></div></noscript>
+    <!-- End of Statcounter Code -->
 
 </body>

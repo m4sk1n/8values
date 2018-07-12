@@ -1,15 +1,9 @@
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
     <title>8values test</title>
     <link rel="icon" type="x-icon" href="icon.png">
     <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
-    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
-    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
-    <script type="application/javascript" src="i18n.js"></script>
-    <script type="application/javascript" src="themeswitcher.js"></script>
 </head>
 
 <body>
@@ -79,13 +73,25 @@
     <p data-i18n="authors_answer"></p>
     <h2 data-i18n="about_me"></h2>
     <p data-i18n="about_me_answer"></p>
+    <script src="https://pl.liberapay.com/m4sk1n/widgets/button.js"></script> <noscript><a href="https://pl.liberapay.com/m4sk1n/donate"><img alt="Przekaż dotację" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+
+    <!-- This is the script for the page itself -->
+    <script type="application/javascript" src="questions.js"></script>
+    <!--<script type="text/javascript">
+        document.getElementById("numOfQuestions").innerHTML = questions.length;
+    </script> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
+    <script type="application/javascript" src="i18n.js"></script>
+    <script type="application/javascript" src="themeswitcher.js"></script>
     <script type="text/javascript">
         i18n_load_ns(["translation", "values"])
     </script>
     <script type="text/javascript">
         theme_load()
     </script>
-    <script src="https://pl.liberapay.com/m4sk1n/widgets/button.js"></script> <noscript><a href="https://pl.liberapay.com/m4sk1n/donate"><img alt="Przekaż dotację" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
     <!-- Website visit statistics - no personal information is collected! -->
     <script type="text/javascript">
         var sc_project = 11583818;
@@ -99,11 +105,5 @@ class="statcounter"
 src="//c.statcounter.com/11583818/0/9cb09cdc/1/" alt="Web
 Analytics"></a></div></noscript>
     <!-- End of Statcounter Code -->
-
-    <!-- This is the script for the page itself -->
-    <script type="application/javascript" src="questions.js"></script>
-    <!--<script type="text/javascript">
-        document.getElementById("numOfQuestions").innerHTML = questions.length;
-    </script> -->
 
 </body>

@@ -1,15 +1,9 @@
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
     <title>8values test</title>
     <link rel="icon" type="x-icon" href="icon.png">
     <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
-    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
-    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
-    <script type="application/javascript" src="i18n.js"></script>
-    <script type="application/javascript" src="themeswitcher.js"></script>
 </head>
 
 <body>
@@ -22,6 +16,13 @@
     <p data-i18n="description" data-ns="instructions" class="question"></p>
     <button data-i18n="confirm" data-ns="instructions" class="button" onclick="localStorage.removeItem('state'); location.href='quiz.html';" style="background-color: #2196f3;"></button> <br>
     <button data-i18n="cancel" data-ns="instructions" class="button" onclick="location.href='index.html';" style="background-color: #f44336;"></button> <br>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
+    <script type="application/javascript" src="i18n.js"></script>
+    <script type="application/javascript" src="themeswitcher.js"></script>
 
     <script type="text/javascript">
         i18n_load_ns("instructions")
