@@ -7,7 +7,7 @@
     "faq_match": "What's the “Closest Match” mean at the bottom of the results?",
     "faq_match_answer": "In addition to matching you to the eight values, the quiz also attempts to match you to a political ideology. This is a work in progress and is much less accurate than the values and axes, so don't take it too seriously. If you disagree with your assigned ideology, send us an email at eightvalues@gmail.com with your scores, matched ideology, and preferred ideology, and we'll look into adjusting the system. Thanks!",
     "faq_scores": "I don't like my scores!",
-    "faq_scores_answer": "¯\\_(ツ)_/¯<br/>If you have any suggestions or constructive criticism, feel free to send it to <a href=\"mailto:me@m4sk.in\">me@m4sk.in</a> or open an issue on the GitHub page here: <a href=\"https://github.com/m4sk1n/8values\">GitHub Page</a>",
+    "faq_scores_answer": "¯\\_(ツ)_/¯<br/>If you have any suggestions or constructive criticism, feel free to send it to <a href=\"mailto:me@m4sk.in\">me@m4sk.in</a> or open an issue on the GitLab page here: <a href=\"https://gitlab.com/m4sk1n/8values\">GitLab Page</a>",
 
     "authors": "Authors",
     "authors_answer": "This version of 8values (forked from <a href=\"https://github.com/8values/8values.github.io\">original</a>) is maintained by <a href=\"https://101010.pl/@m4sk1n\">Marcin Mikołajczak</a>.<br>Thanks to <a href=\"https://github.com/8values/8values.github.io/graphs/contributors\">all contributors</a> from original 8values, <a href=\"https://github.com/gervasiocaj\">gervasiocaj</a> for localization support, <a href=\"https://github.com/t2n\">t2n</a> for progress saving and <a href=\"https://github.com/brmbrmcar\">brmbrmcar</a> for improving scores calculation.",

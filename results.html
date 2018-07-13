@@ -197,6 +197,15 @@
         }
 
         function ready() {
+            if (localStorage.getItem('dark-theme') == 'true') {
+                var background = "#111";
+                var text = "#EEE";
+            }
+            else {
+                var background = "#EEE";
+                var text = "#222";
+            }
+            var label = "#EEE";
             ideo_t = i18next.getFixedT(null, "ideologies")
             mat_t = i18next.getFixedT(null, "matches")
             console.log(ideologies)
@@ -207,8 +216,9 @@
             document.getElementById("society-label").innerHTML = setLabel(progress, "scty")
             var c = document.getElementById("banner")
             var ctx = c.getContext("2d")
-            ctx.fillStyle = "#EEEEEE"
+            ctx.fillStyle = background
             ctx.fillRect(0, 0, 800, 650)
+            ctx.fillStyle = "#EEE"
             ctx.font = "14px Montserrat"
             ctx.textAlign = "center"
             img = document.getElementById("img-equality")
@@ -243,7 +253,7 @@
             ctx.drawImage(img, 680, 530, 100, 100)
             cap = document.getElementById("cap-progress").innerText
             ctx.fillText(cap, 730, 620)
-            ctx.fillStyle = "#222222"
+            ctx.fillStyle = "#222"
             ctx.fillRect(120, 180, 560, 80)
             ctx.fillRect(120, 300, 560, 80)
             ctx.fillRect(120, 420, 560, 80)
@@ -264,7 +274,7 @@
             ctx.fillRect(120, 544, 5.6 * tradition - 2, 72)
             ctx.fillStyle = "#9c27b0"
             ctx.fillRect(682 - 5.6 * progress, 544, 5.6 * progress - 2, 72)
-            ctx.fillStyle = "#222222"
+            ctx.fillStyle = text
             ctx.font = "700 80px Montserrat"
             ctx.textAlign = "left"
             ctx.fillText("8values", 20, 90)
@@ -273,6 +283,7 @@
             ctx.fillText(ideo_t(ideology), 780, 87.5)
             ctx.font = "50px Montserrat"
             ctx.textAlign = "left"
+            ctx.fillStyle = "#222"
             if (equality > 30) {
                 ctx.fillText(equality + "%", 130, 237.5)
             }
@@ -299,6 +310,7 @@
                 ctx.fillText(progress + "%", 670, 597.5)
             }
             ctx.font = "300 30px Montserrat"
+            ctx.fillStyle = text
             ctx.fillText("8values.m4sk.in", 780, 60)
             ctx.textAlign = "center"
             ctx.fillText(i18next.t("economic_axis") + document.getElementById("economic-label").innerHTML, 400, 175)
