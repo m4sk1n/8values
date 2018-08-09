@@ -7,7 +7,7 @@ ideologies = {
     },
     "ideo2": {
         "econ": 100,
-        "dipl": 70,
+        "dipl": 80,
         "govt": 80,
         "scty": 80
     },
@@ -19,8 +19,8 @@ ideologies = {
     },
     "ideo4": {
         "econ": 100,
-        "dipl": 70,
-        "govt": 40,
+        "dipl": 80,
+        "govt": 30,
         "scty": 80
     },
     "ideo5": {
@@ -139,13 +139,13 @@ ideologies = {
     },
     "ideo24": {
         "econ": 50,
-        "dipl": 20,
+        "dipl": 10,
         "govt": 0,
         "scty": 50
     },
     "ideo25": {
         "econ": 50,
-        "dipl": 80,
+        "dipl": 90,
         "govt": 0,
         "scty": 50
     },
@@ -153,7 +153,7 @@ ideologies = {
         "econ": 60,
         "dipl": 60,
         "govt": 20,
-        "scty": 70
+        "scty": 80
     },
     "ideo27": {
         "econ": 50,
@@ -223,14 +223,14 @@ ideologies = {
     },
     "ideo38": {
         "econ": 40,
-        "dipl": 20,
-        "govt": 20,
+        "dipl": 10,
+        "govt": 10,
         "scty": 20
     },
     "ideo39": {
-        "econ": 20,
-        "dipl": 20,
-        "govt": 20,
+        "econ": 10,
+        "dipl": 10,
+        "govt": 10,
         "scty": 20
     },
     "ideo40": {
@@ -294,7 +294,7 @@ ideologies = {
     },
     "ideo50": {
         "econ": 0,
-        "dipl": 30,
+        "dipl": 20,
         "govt": 0,
         "scty": 50
     },
