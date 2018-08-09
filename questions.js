@@ -154,7 +154,7 @@ questions = [{
     {
         "question": "q18",
         "effect": {
-            "econ": -5,
+            "econ": 0,
             "dipl": 10,
             "govt": 10,
             "scty": 5
