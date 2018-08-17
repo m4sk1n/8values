@@ -1,4 +1,7 @@
 {
+    "title": "8values Quiz",
+    "title_results": "8values Results",
+
     "start": "Click here to start!",
     "faq_whatis": "What is 8values?",
     "faq_whatis_answer": "8values is, in essence, a political quiz that attempts to assign percentages for eight different political values. You will be presented by a statement, and then you will answer with your opinion on the statement, from <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly affecting your scores. At the end of the quiz, your answers will be compared to the maximum possible for each value, thus giving you a percentage. Answer honestly!<br />There are 70 questions in the test.",

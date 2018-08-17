@@ -1,4 +1,7 @@
 {
+    "title": "Test 8values",
+    "title_results": "Wyniki testu 8values",
+
     "start": "Naciśnij, aby rozpocząć!",
     "faq_whatis": "Czym jest 8values?",
     "faq_whatis_answer": "8values jest testem politycznym, który stara się przyporządkować procentowo Twoje poglądy do ośmiu różnych wartości politycznych. Zostaniesz zapoznany/a z opinią, do której musisz ustosunkować się, od <b>W pełni zgadzam się</b> do <b>Zdecydowanie nie zgadzam się</b>, a każda odpowiedź ma wpływ na wynik. Na końcu, Twoje wartości zostaną porównane z maksymalnymi dla każdej wartości, zwracając wartość procentową. Odpowiadaj szczerze!<br/>Test składa się z 70 pytań.",
