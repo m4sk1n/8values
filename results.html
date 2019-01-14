@@ -4,8 +4,6 @@
     <link rel="icon" type="x-icon" href="icon.png">
     <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
-<!-- Add the stylesheet to the head -->
-<link rel="stylesheet" type="text/css" href="clippy.css" media="all">
 </head>
 
 <body>
@@ -92,6 +90,7 @@
 
     <hr/>
     <canvas id="banner" width=800 height=650 style="font-family:Montserrat"></canvas>
+    <button data-i18n="download" class="small_button" onclick="downloadCanvas()"></button>
     <h2><span data-i18n="you_here"></span></h2>
     <p data-i18n="you_here_desc"></p><br/>
     <button data-i18n="back" class="button" onclick="localStorage.removeItem('state'); location.href='index.html';" style="background-color: #2196f3;"></button> <br>
@@ -212,7 +211,7 @@
             var label = "#EEE";
             ideo_t = i18next.getFixedT(null, "ideologies")
             mat_t = i18next.getFixedT(null, "matches")
-            console.log(ideologies)
+            // console.log(ideologies)
             document.getElementById("ideology-label").innerHTML = ideo_t(ideology)
             document.getElementById("economic-label").innerHTML = setLabel(equality, "econ")
             document.getElementById("diplomatic-label").innerHTML = setLabel(peace, "dipl")
@@ -322,6 +321,15 @@
             ctx.fillText(i18next.t("civic_axis") + document.getElementById("state-label").innerHTML, 400, 415)
             ctx.fillText(i18next.t("societal_axis") + document.getElementById("society-label").innerHTML, 400, 535)
         }
+
+        function downloadCanvas() {
+            var downloader = document.createElement("a")
+            downloader.href = document.getElementById("banner").toDataURL("image/png").replace("image/png", "image/octet-stream")
+            downloader.download = "results.png"
+            document.body.appendChild(downloader)
+            downloader.click()
+            document.body.removeChild(downloader)
+        }
     </script>
 
     <!-- Website visit statistics - no personal information is collected! -->
@@ -338,7 +346,5 @@ src="//c.statcounter.com/11583818/0/9cb09cdc/1/" alt="Web
 Analytics"></a></div></noscript>
     <!-- End of Statcounter Code -->
 <!-- Add these scripts to  the bottom of the page -->
-<!-- jQuery 1.7+ -->
-<script src="jquery-1.7.0.min.js"></script>
 
 </body>

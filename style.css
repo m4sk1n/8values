@@ -82,7 +82,7 @@ a {
     color: white;
     padding: 8pt;
     width: 50%;
-    min-width: 500pt;
+    min-width: fit-content;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -100,7 +100,7 @@ a {
     color: white;
     padding: 8pt;
     width: 10%;
-    min-width: 100pt;
+    min-width: fit-content;
     text-align: center;
     text-decoration: none;
     display: block;
