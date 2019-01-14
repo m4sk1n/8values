@@ -1,4 +1,4 @@
-function set_dark() {
+function setDark() {
     localStorage.setItem("dark-theme", 'true');
     let sheet = document.createElement('style');
     sheet.id = 'dark';
@@ -6,12 +6,12 @@ function set_dark() {
     document.body.appendChild(sheet);
 }
 
-function set_light() {
+function setLight() {
     localStorage.setItem("dark-theme", 'false');
     document.getElementById("dark").remove();
 }
 
-function theme_load() {
+function themeLoad() {
     let theme = "light";
     try {
         if (localStorage.getItem('dark-theme') == "true") {
@@ -20,16 +20,16 @@ function theme_load() {
     } catch (err) {}
 
     if (theme == "dark") {
-        set_dark();
+        setDark();
     }
 }
 
-function switch_theme() {
+function switchTheme() {
     let theme = "light";
     try {
         if (localStorage.getItem('dark-theme') == "true") theme = "dark";
     } catch (err) {}
     if (theme == "dark") {
-        set_light();
-    } else set_dark();
+        setLight();
+    } else setDark();
 }

@@ -9,19 +9,23 @@
 <body>
     <button class="lang_button small_button" onclick="i18next.changeLanguage('pl'); location.reload();">Polski</button>
     <button class="lang_button small_button" onclick="i18next.changeLanguage('en'); location.reload();">English</button>
-    <button data-i18n="switch_theme" class="theme_button small_button" onclick="switch_theme();"></button>
+    <button data-i18n="switch_theme" class="theme_button small_button" onclick="switchTheme();"></button>
     <h1>8values</h1>
     <hr>
     <h2 style="text-align:center;" id="question-number" data-i18n="question_no" data-ns="quiz">Loading…</h2>
     <p class="question" id="question-text" data-ns="questions"></p>
-    <button class="button" onclick="next_question( 1.0)" style="background-color: #1b5e20;" data-i18n="strongly_agree" data-ns="quiz"></button> <br>
-    <button class="button" onclick="next_question( 0.5)" style="background-color: #4caf50;" data-i18n="agree" data-ns="quiz"></button> <br>
-    <button class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;" data-i18n="neutral" data-ns="quiz"></button> <br>
-    <button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;" data-i18n="disagree" data-ns="quiz"></button> <br>
-    <button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;" data-i18n="strongly_disagree" data-ns="quiz"></button> <br>
-    <button class="small_button" onclick="prev_question()" id="back_button" data-i18n="back"></button>
-    <button class="small_button_off" id="back_button_off" data-i18n="back"></button><br>
-    <button class="small_button small_button_alert" onclick="start_over()" id="reset_button" data-i18n="start_over"></button>
+    <button class="button" onclick="nextQuestion( 1.0)" style="background-color: #1b5e20;" data-i18n="strongly_agree" data-ns="quiz"></button> <br>
+    <button class="button" onclick="nextQuestion( 0.5)" style="background-color: #4caf50;" data-i18n="agree" data-ns="quiz"></button> <br>
+    <button class="button" onclick="nextQuestion( 0.0)" style="background-color: #bbbbbb;" data-i18n="neutral" data-ns="quiz"></button> <br>
+    <button class="button" onclick="nextQuestion(-0.5)" style="background-color: #f44336;" data-i18n="disagree" data-ns="quiz"></button> <br>
+    <button class="button" onclick="nextQuestion(-1.0)" style="background-color: #b71c1c;" data-i18n="strongly_disagree" data-ns="quiz"></button> <br>
+    <div style="text-align: center">
+        <button class="small_button" style="display: initial" onclick="skipQuestion()" id="" data-i18n="answer_later">Odpowiedz później</button>
+        <button class="small_button" onclick="prevQuestion()" id="back_button" data-i18n="back"></button>
+        <button class="small_button_off" id="back_button_off" data-i18n="back"></button>
+    </div>
+    <br>
+    <button class="small_button small_button_alert" onclick="startOver()" id="reset_button" data-i18n="start_over"></button>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
     <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
@@ -31,102 +35,147 @@
     <script type="application/javascript" src="themeswitcher.js"></script>
 
     <script type="text/javascript">
-        theme_load()
+        themeLoad();
     </script>
 
     <!-- JavaScript for the test itself -->
 
     <script>
-        i18n_load_ns(["questions", "quiz", "translation"], display_progress)
+        i18n_load_ns(["questions", "quiz", "translation"], displayProgress)
         var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
         max_econ = max_dipl = max_govt = max_scty = 0;
         var econ, dipl, govt, scty; // User's scores
         econ = dipl = govt = scty = 0;
         var qn = 0; // Question number
-        var prev_answer = null;
+        var prevAnswer = null;
+        var later = [];
+        var areLater = false;
 
-        let state;
+        var state;
         try {
             state = JSON.parse(localStorage.getItem('state'));
         } catch(err) {}
 
-        if(state) {
+        if (state) {
             econ = state.econ;
             dipl = state.dipl;
             govt = state.govt;
             scty = state.scty;
+            max_econ = state.max_econ;
+            max_dipl = state.max_dipl;
+            max_govt = state.max_govt;
+            max_scty = state.max_scty;
             qn = state.qn;
+            later = state.later;
+            areLater = state.areLater;
         }
 
-        function display_progress() {
-            document.getElementById("question-text").dataset.i18n = questions[qn].question
-            document.getElementById("question-number").dataset.current = qn + 1
-            document.getElementById("question-number").dataset.total = questions.length
-            i18n_ready()
-            if (prev_answer == null) {
+        function displayProgress() {
+            document.getElementById("question-text").dataset.i18n = questions[qn].question;
+            document.getElementById("question-number").dataset.current = qn + 1;
+            document.getElementById("question-number").dataset.total = questions.length;
+            i18n_ready();
+            if (prevAnswer == null) {
                 document.getElementById("back_button").style.display = 'none';
-                document.getElementById("back_button_off").style.display = 'block';
+                document.getElementById("back_button_off").style.display = 'initial';
             } else {
-                document.getElementById("back_button").style.display = 'block';
+                document.getElementById("back_button").style.display = 'initial';
                 document.getElementById("back_button_off").style.display = 'none';
             }
         }
 
-        function next_question(mult) {
-            econ += mult * questions[qn].effect.econ
-            dipl += mult * questions[qn].effect.dipl
-            govt += mult * questions[qn].effect.govt
-            scty += mult * questions[qn].effect.scty
-            max_econ += Math.abs(mult * questions[qn].effect.econ)
-            max_dipl += Math.abs(mult * questions[qn].effect.dipl)
-            max_govt += Math.abs(mult * questions[qn].effect.govt)
-            max_scty += Math.abs(mult * questions[qn].effect.scty)
+        function saveState() {
+            localStorage.setItem('state', JSON.stringify({
+                econ: econ,
+                dipl: dipl,
+                govt: govt,
+                scty: scty,
+                max_econ: max_econ,
+                max_dipl: max_dipl,
+                max_govt: max_govt,
+                max_scty: max_scty,
+                qn: qn,
+                later: later,
+                areLater: areLater
+            }));
+        }
+
+        function nextQuestion(mult) {
+            econ += mult * questions[qn].effect.econ;
+            dipl += mult * questions[qn].effect.dipl;
+            govt += mult * questions[qn].effect.govt;
+            scty += mult * questions[qn].effect.scty;
+            max_econ += Math.abs(mult * questions[qn].effect.econ);
+            max_dipl += Math.abs(mult * questions[qn].effect.dipl);
+            max_govt += Math.abs(mult * questions[qn].effect.govt);
+            max_scty += Math.abs(mult * questions[qn].effect.scty);
             qn++;
-            prev_answer = mult;
-            if (qn < questions.length) {
-                display_progress()
-                localStorage.setItem('state', JSON.stringify({
-                    econ: econ,
-                    dipl: dipl,
-                    govt: govt,
-                    scty: scty,
-                    qn: qn
-                }));
+            prevAnswer = mult;
+            if (areLater) {
+                later = later.slice(1);
+                if (later.length) {
+                    areLater = true;
+                    qn = later[0];
+                    displayProgress();
+                    saveState();
+                } else {
+                    results();
+                }
+            } else if (qn < questions.length) {
+                displayProgress();
+                saveState();
+            } else if (later.length) {
+                qn = later[0];
+                areLater = true;
+                displayProgress();
+                saveState();
             } else {
-                results()
+                results();
             }
         }
 
-        function prev_question() {
-            if (prev_answer == null) {
+        function prevQuestion() {
+            if (prevAnswer == null) {
                 return;
             }
             qn--;
-            econ -= prev_answer * questions[qn].effect.econ;
-            dipl -= prev_answer * questions[qn].effect.dipl;
-            govt -= prev_answer * questions[qn].effect.govt;
-            scty -= prev_answer * questions[qn].effect.scty;
-            prev_answer = null;
-            display_progress();
+            econ -= prevAnswer * questions[qn].effect.econ;
+            dipl -= prevAnswer * questions[qn].effect.dipl;
+            govt -= prevAnswer * questions[qn].effect.govt;
+            scty -= prevAnswer * questions[qn].effect.scty;
+            prevAnswer = null;
+            displayProgress();
         }
 
-        function start_over() {
+        function skipQuestion() {
+            later.push(qn);
+            if (qn === questions.length - 1) {
+                qn = later[0];
+                areLater = true;
+            } else {
+                qn++;
+            }
+            saveState();
+            displayProgress();
+        }
+
+        function startOver() {
             if(confirm(i18next.t('confirm'))) {
                 localStorage.removeItem('state');
                 location.reload();
             }
         }
 
-        function calc_score(score, max) {
-            return (100 * ((score + max) / max / 2)).toFixed(1)
+        function calcScore(score, max) {
+            return (100 * ((score + max) / max / 2)).toFixed(1);
         }
 
         function results() {
             location.href = `results.html` +
-                `?e=${calc_score(econ,max_econ+0.000001)}` +
-                `&d=${calc_score(dipl,max_dipl+0.000001)}` +
-                `&g=${calc_score(govt,max_govt+0.000001)}` +
-                `&s=${calc_score(scty,max_scty+0.000001)}`
+                `?e=${calcScore(econ,max_econ+0.000001)}` +
+                `&d=${calcScore(dipl,max_dipl+0.000001)}` +
+                `&g=${calcScore(govt,max_govt+0.000001)}` +
+                `&s=${calcScore(scty,max_scty+0.000001)}`;
         }
     </script>
 

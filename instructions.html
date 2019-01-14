@@ -9,7 +9,7 @@
 <body>
     <button class="lang_button small_button" onclick="i18next.changeLanguage('pl'); location.reload();">Polski</button>
     <button class="lang_button small_button" onclick="i18next.changeLanguage('en'); location.reload();">English</button>
-    <button data-i18n="switch_theme" data-ns="instructions" class="theme_button small_button" onclick="switch_theme();"></button>
+    <button data-i18n="switch_theme" data-ns="instructions" class="theme_button small_button" onclick="switchTheme();"></button>
     <h1>8values</h1>
     <hr>
     <h2 data-i18n="title" data-ns="instructions" style="text-align:center;"></h2>
@@ -28,7 +28,7 @@
         i18n_load_ns("instructions")
     </script>
     <script type="text/javascript">
-        theme_load()
+        themeLoad()
     </script>
 
     <!-- Website visit statistics - no personal information is collected! -->
