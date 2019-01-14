@@ -13,7 +13,7 @@
         "node": ">=6.00"
     },
     "scripts": {
-        "build": "mkdir public && cp -r *.js *.png *.svg *.html *.css locales value_images public/ && uglifycss ./public/style.css --output ./public/style.css && html-minifier --collapse-whitespace --keep-closing-slash --file-ext html --remove-comments --minify-css true --minify-js true --input-dir public --output-dir public && mkdir -p public/.well-known/acme-challenge && echo \"Vg69Q9szK3PmNH3eQlSpM9r2co2N8iLbM4OvLbpkIZU.noAY_V4mxEkrnV4lgGHZgQnvYKtRe14L3iEIVQOJxec\" > public/.well-known/acme-challenge/Vg69Q9szK3PmNH3eQlSpM9r2co2N8iLbM4OvLbpkIZU"
+        "build": "mkdir public && cp -r *.js *.png *.svg *.html *.css locales value_images public/ && uglifycss ./public/style.css --output ./public/style.css && html-minifier --collapse-whitespace --keep-closing-slash --file-ext html --remove-comments --minify-css true --minify-js true --input-dir public --output-dir public && mkdir -p public/.well-known/acme-challenge && echo \"W7j_Re4k0GcUvVvtQIsAUvza2-mpRlQuQGk9o3PiKfA.k3slQtITNZeUUv3q-KXP_6Aqj3VB3lScgkgtXX_Y-go\" > public/.well-known/acme-challenge/W7j_Re4k0GcUvVvtQIsAUvza2-mpRlQuQGk9o3PiKfA && echo \"HS_0AT5BFZieTRsPx-GPwxHIsV5bL8OF0SScswJ3H_I.k3slQtITNZeUUv3q-KXP_6Aqj3VB3lScgkgtXX_Y-go\" > public/.well-known/acme-challenge/HS_0AT5BFZieTRsPx-GPwxHIsV5bL8OF0SScswJ3H_I"
     },
     "dependencies": {
         "html-minifier": "^3.5.3",
