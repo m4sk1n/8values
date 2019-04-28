@@ -1,47 +1,4 @@
-<head>
-    <link href='style.css' rel='stylesheet' type='text/css'>
-    <title data-i18n="title">8values Quiz</title>
-    <link rel="icon" type="x-icon" href="icon.png">
-    <link rel="shortcut icon" type="x-icon" href="icon.png">
-    <meta charset="utf-8">
-</head>
-
-<body>
-    <button class="lang_button small_button" onclick="i18next.changeLanguage('pl'); location.reload();">Polski</button>
-    <button class="lang_button small_button" onclick="i18next.changeLanguage('en'); location.reload();">English</button>
-    <button data-i18n="switch_theme" class="theme_button small_button" onclick="switchTheme();"></button>
-    <h1>8values</h1>
-    <hr>
-    <h2 style="text-align:center;" id="question-number" data-i18n="question_no" data-ns="quiz">Loading…</h2>
-    <p class="question" id="question-text" data-ns="questions"></p>
-    <button class="button" onclick="nextQuestion( 1.0)" style="background-color: #1b5e20;" data-i18n="strongly_agree" data-ns="quiz"></button> <br>
-    <button class="button" onclick="nextQuestion( 0.5)" style="background-color: #4caf50;" data-i18n="agree" data-ns="quiz"></button> <br>
-    <button class="button" onclick="nextQuestion( 0.0)" style="background-color: #bbbbbb;" data-i18n="neutral" data-ns="quiz"></button> <br>
-    <button class="button" onclick="nextQuestion(-0.5)" style="background-color: #f44336;" data-i18n="disagree" data-ns="quiz"></button> <br>
-    <button class="button" onclick="nextQuestion(-1.0)" style="background-color: #b71c1c;" data-i18n="strongly_disagree" data-ns="quiz"></button> <br>
-    <div style="text-align: center">
-        <button class="small_button" style="display: initial" onclick="skipQuestion()" id="" data-i18n="answer_later">Odpowiedz później</button>
-        <button class="small_button" onclick="prevQuestion()" id="back_button" data-i18n="back"></button>
-        <button class="small_button_off" id="back_button_off" data-i18n="back"></button>
-    </div>
-    <br>
-    <button class="small_button small_button_alert" onclick="startOver()" id="reset_button" data-i18n="start_over"></button>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-    <script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script>
-    <script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script>
-    <script type="application/javascript" src="questions.js"></script>
-    <script type="application/javascript" src="i18n.js"></script>
-    <script type="application/javascript" src="themeswitcher.js"></script>
-
-    <script type="text/javascript">
-        themeLoad();
-    </script>
-
-    <!-- JavaScript for the test itself -->
-
-    <script>
-        i18n_load_ns(["questions", "quiz", "translation"], displayProgress)
+<head><link href="style.css" rel="stylesheet" type="text/css"><title data-i18n="title">8values Quiz</title><link rel="icon" type="x-icon" href="icon.png"><link rel="shortcut icon" type="x-icon" href="icon.png"><meta charset="utf-8"></head><body><button class="lang_button small_button" onclick='i18next.changeLanguage("pl"),location.reload()'>Polski</button> <button class="lang_button small_button" onclick='i18next.changeLanguage("en"),location.reload()'>English</button> <button data-i18n="switch_theme" class="theme_button small_button" onclick="switchTheme()"></button><h1>8values</h1><hr><h2 style="text-align:center" id="question-number" data-i18n="question_no" data-ns="quiz">Loading…</h2><p class="question" id="question-text" data-ns="questions"></p><button class="button" onclick="nextQuestion(1)" style="background-color:#1b5e20" data-i18n="strongly_agree" data-ns="quiz"></button><br><button class="button" onclick="nextQuestion(.5)" style="background-color:#4caf50" data-i18n="agree" data-ns="quiz"></button><br><button class="button" onclick="nextQuestion(0)" style="background-color:#bbb" data-i18n="neutral" data-ns="quiz"></button><br><button class="button" onclick="nextQuestion(-.5)" style="background-color:#f44336" data-i18n="disagree" data-ns="quiz"></button><br><button class="button" onclick="nextQuestion(-1)" style="background-color:#b71c1c" data-i18n="strongly_disagree" data-ns="quiz"></button><br><div style="text-align:center"><button class="small_button" style="display:initial" onclick="skipQuestion()" id="" data-i18n="answer_later">Odpowiedz później</button> <button class="small_button" onclick="prevQuestion()" id="back_button" data-i18n="back"></button> <button class="small_button_off" id="back_button_off" data-i18n="back"></button></div><br><button class="small_button small_button_alert" onclick="startOver()" id="reset_button" data-i18n="start_over"></button><link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet"><script src="https://unpkg.com/i18next@8.0.0/i18next.min.js"></script><script src="https://unpkg.com/i18next-browser-languagedetector@1.0.1/i18nextBrowserLanguageDetector.min.js"></script><script src="https://unpkg.com/i18next-xhr-backend@1.4.1/i18nextXHRBackend.min.js"></script><script type="application/javascript" src="questions.js"></script><script type="application/javascript" src="i18n.js"></script><script type="application/javascript" src="themeswitcher.js"></script><script type="text/javascript">themeLoad()</script><script>i18n_load_ns(["questions", "quiz", "translation"], displayProgress)
         var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
         max_econ = max_dipl = max_govt = max_scty = 0;
         var econ, dipl, govt, scty; // User's scores
@@ -176,7 +133,5 @@
                 `&d=${calcScore(dipl,max_dipl+0.000001)}` +
                 `&g=${calcScore(govt,max_govt+0.000001)}` +
                 `&s=${calcScore(scty,max_scty+0.000001)}`;
-        }
-    </script>
-
-</body>
+        }</script><script type="text/javascript">var sc_project=11583818,sc_invisible=1,sc_security="9cb09cdc"</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script><noscript><div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="//c.statcounter.com/11583818/0/9cb09cdc/1/" alt="Web
+Analytics"></a></div></noscript></body>
