@@ -309,5 +309,11 @@ ideologies = {
         "dipl": 50,
         "govt": 100,
         "scty": 50
+    },
+    "ideo53": {
+        "econ": 50.6,
+        "dipl": 21.8,
+        "govt": 17.3,
+        "scty": 17.5
     }
 };
