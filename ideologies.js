@@ -222,13 +222,13 @@ ideologies = {
         "scty": 50
     },
     "ideo38": {
-        "econ": 40,
+        "econ": 60,
         "dipl": 10,
         "govt": 10,
         "scty": 20
     },
     "ideo39": {
-        "econ": 10,
+        "econ": 25,
         "dipl": 10,
         "govt": 10,
         "scty": 20
